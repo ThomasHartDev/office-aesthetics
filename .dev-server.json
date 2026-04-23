@@ -1,0 +1,12 @@
+{
+  "name": "office-aesthetics",
+  "framework": "nuxt",
+  "ports": [
+    {
+      "port": 4110,
+      "label": "web",
+      "ui": true
+    }
+  ],
+  "dev": "npm run dev -- --port 4110"
+}
