@@ -46,7 +46,12 @@
     <!-- Reviews Header: "Showing X of X reviews" + filter buttons -->
     <div class="reviews-list-header">
       <div class="reviews-count">
-        Showing 1 - 6 of {{ totalReviews }} reviews
+        <template v-if="filteredReviews.length">
+          Showing {{ paginatedReviews.length }} of {{ filteredReviews.length }} reviews
+        </template>
+        <template v-else>
+          No reviews yet
+        </template>
       </div>
       <div class="filters-row">
         <button
@@ -60,23 +65,29 @@
       </div>
     </div>
 
+    <!-- Empty State -->
+    <div v-if="!filteredReviews.length" class="empty-state">
+      <p>Be the first to review this product.</p>
+      <button class="write-review-btn" @click="openReviewModal">
+        Write a review
+      </button>
+    </div>
+
     <!-- Reviews List -->
-    <div class="reviews-list">
+    <div v-else class="reviews-list">
       <div
-        v-for="review in filteredReviews"
+        v-for="review in paginatedReviews"
         :key="review._id"
         class="review-card"
       >
-        <!-- Top Row: Name (censored) + Verified Check + Date -->
         <div class="review-top-row">
           <span class="reviewer-name">{{
             censorName(review.reviewerName)
           }}</span>
-          <span class="verified-check-icon" title="Verified Reviewer">✔</span>
+          <span class="verified-check-icon" title="Verified Buyer">✔</span>
           <span class="review-date">{{ formatDate(review.date) }}</span>
         </div>
 
-        <!-- Star Rating Row -->
         <div class="star-rating">
           <span
             v-for="i in 5"
@@ -88,14 +99,14 @@
           </span>
         </div>
 
-        <!-- Comment -->
+        <h4 v-if="review.title" class="review-title">{{ review.title }}</h4>
+
         <div class="review-body">
           <p class="review-comment">{{ review.comment }}</p>
         </div>
 
-        <!-- Helpful Section -->
         <div class="helpful-section">
-          <span>Is this helpful?</span>
+          <span>Helpful?</span>
           <button
             class="thumbs-btn"
             @click="markHelpful(review, 'up')"
@@ -112,6 +123,14 @@
           </button>
         </div>
       </div>
+
+      <button
+        v-if="paginatedReviews.length < filteredReviews.length"
+        class="load-more-btn"
+        @click="visibleCount += 6"
+      >
+        Show more reviews
+      </button>
     </div>
 
     <!-- Write Review Modal -->
@@ -157,13 +176,13 @@
               <label class="input-label">Review Title *</label>
               <input
                 type="text"
-                placeholder="Text field title placeholder"
+                placeholder="Summarize your experience"
                 v-model="reviewForm.title"
               />
 
               <label class="input-label">Review Content *</label>
               <textarea
-                placeholder="Text field content placeholder"
+                placeholder="What did you like or dislike about this product?"
                 v-model="reviewForm.comment"
               ></textarea>
 
@@ -203,14 +222,14 @@
               <label class="input-label">Your Name *</label>
               <input
                 type="text"
-                placeholder="Text field name placeholder"
+                placeholder="Your full name"
                 v-model="reviewForm.reviewerName"
               />
 
               <label class="input-label">Your Email *</label>
               <input
                 type="email"
-                placeholder="Text field email placeholder"
+                placeholder="you@example.com"
                 v-model="reviewForm.email"
               />
 
@@ -236,6 +255,7 @@ const reviews = ref([]);
 const totalReviews = ref(0);
 const overallRating = ref(0);
 const votedReviews = ref([]);
+const visibleCount = ref(6);
 
 const ratingCounts = computed(() => {
   const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
@@ -254,9 +274,8 @@ function calculateProgressWidth(star) {
   return (count / maxCount) * 100 + "%";
 }
 
-const uniquePhotos = computed(() => {
-  const allPhotos = reviews.value.flatMap((r) => r.photos || []);
-  return [...new Set(allPhotos)];
+const paginatedReviews = computed(() => {
+  return filteredReviews.value.slice(0, visibleCount.value);
 });
 
 const filterOptions = [
@@ -309,6 +328,7 @@ function calculateStats() {
 
 function applyFilter(value) {
   activeFilter.value = value;
+  visibleCount.value = 6;
 }
 
 const filteredReviews = computed(() => {
@@ -323,7 +343,8 @@ const filteredReviews = computed(() => {
 });
 
 function applyStarFilter(star) {
-  activeFilter.value = star;
+  activeFilter.value = activeFilter.value === star ? "all" : star;
+  visibleCount.value = 6;
 }
 
 function hasVoted(review) {
@@ -619,6 +640,12 @@ function censorName(name) {
 .star.filled {
   color: #ea5520;
 }
+.review-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111;
+}
 .review-body {
   margin-top: 0.2rem;
 }
@@ -803,6 +830,29 @@ function censorName(name) {
 .next-btn:hover,
 .submit-btn:hover {
   background: #dc2626;
+}
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+.empty-state .write-review-btn {
+  margin-top: 1rem;
+}
+.load-more-btn {
+  align-self: center;
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #374151;
+  margin-top: 0.5rem;
+}
+.load-more-btn:hover {
+  background: #f3f4f6;
 }
 .fade-enter-active,
 .fade-leave-active {
