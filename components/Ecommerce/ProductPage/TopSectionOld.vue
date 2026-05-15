@@ -2,32 +2,57 @@
   <section class="section">
     <!-- Inline Image Gallery -->
     <div class="gallery">
-      <div class="main-image">
-        <img :src="getImagePath(computedGalleryImage)" alt="Product Image" />
-        <div class="thumbnails-overlay">
-          <button v-if="canScrollUp" class="scroll-arrow up" @click="scrollUp">
+      <div class="gallery-layout">
+        <div
+          v-if="item && item.moreImages && item.moreImages.length"
+          class="thumbnails-rail"
+        >
+          <button
+            v-if="canScrollUp"
+            class="scroll-arrow up"
+            @click="scrollUp"
+            aria-label="Scroll thumbnails up"
+          >
             &uarr;
           </button>
           <div class="thumbnails-container" ref="thumbnailContainer">
-            <img
-              v-for="(img, index) in item && item.moreImages
-                ? item.moreImages
-                : []"
+            <button
+              type="button"
+              class="thumbnail"
+              :class="{ active: computedGalleryImage === item.image }"
+              @click="selectImage(item.image)"
+              @mouseover="hoverImage(item.image)"
+              @mouseleave="resetImage"
+              aria-label="View main image"
+            >
+              <img :src="getImagePath(item.image)" alt="" />
+            </button>
+            <button
+              v-for="(img, index) in item.moreImages"
               :key="index"
-              :src="getImagePath(img)"
+              type="button"
+              class="thumbnail"
+              :class="{ active: computedGalleryImage === img }"
+              @click="selectImage(img)"
               @mouseover="hoverImage(img)"
               @mouseleave="resetImage"
-              :class="{ active: computedGalleryImage === img }"
-              class="thumbnail"
-            />
+              :aria-label="`View image ${index + 2}`"
+            >
+              <img :src="getImagePath(img)" alt="" />
+            </button>
           </div>
           <button
             v-if="canScrollDown"
             class="scroll-arrow down"
             @click="scrollDown"
+            aria-label="Scroll thumbnails down"
           >
             &darr;
           </button>
+        </div>
+
+        <div class="main-image">
+          <img :src="getImagePath(computedGalleryImage)" alt="Product Image" />
         </div>
       </div>
 
@@ -261,11 +286,17 @@ const getImagePath = (img) => `/ItemPics/${img || ""}`;
 
 const thumbnailContainer = ref(null);
 const scrollPosition = ref(0);
+const selectedImage = ref(null);
+function selectImage(img) {
+  selectedImage.value = img;
+  galleryActiveImage.value = img;
+}
 function hoverImage(img) {
   galleryActiveImage.value = img;
 }
 function resetImage() {
-  galleryActiveImage.value = computedGalleryImage.value;
+  galleryActiveImage.value =
+    selectedImage.value || computedGalleryImage.value;
 }
 function scrollUp() {
   if (thumbnailContainer.value) {
@@ -628,66 +659,96 @@ function handleNotifyMe() {
   position: relative;
   background: white;
   flex: 1;
+  margin-top: 3rem;
+}
+.gallery-layout {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.thumbnails-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  width: 84px;
+  flex-shrink: 0;
+}
+.thumbnails-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: auto;
+  max-height: 520px;
+  padding: 2px;
+  width: 100%;
+  scrollbar-width: thin;
+}
+.thumbnails-container::-webkit-scrollbar {
+  width: 4px;
+}
+.thumbnails-container::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+.thumbnail {
+  width: 76px;
+  height: 76px;
+  padding: 0;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  flex-shrink: 0;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.thumbnail:hover {
+  border-color: #9ca3af;
+}
+.thumbnail.active {
+  border-color: #111;
+  box-shadow: 0 0 0 1px #111;
 }
 .main-image {
   position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: 3rem;
+  flex: 1;
+  min-width: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f9fafb;
+  aspect-ratio: 1 / 1;
 }
 .main-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.2s ease-out;
-}
-.thumbnails-overlay {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: calc(100% - 20px);
-  width: 80px;
-}
-.thumbnails-container {
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  gap: 15px;
-  width: 90px;
-}
-.thumbnail {
-  min-width: 70px;
-  min-height: 70px;
-  max-width: 70px;
-  max-height: 70px;
-  cursor: pointer;
-  object-fit: cover;
-  transition: border-color 0.3s ease;
-  border: 2px solid #000;
-  background: white;
-}
-.thumbnail.active,
-.thumbnail:hover {
-  border-color: #3f654c;
+  transition: opacity 0.2s ease-out;
 }
 .scroll-arrow {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 5px;
+  background: #fff;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 14px;
+  border-radius: 50%;
   user-select: none;
+  transition: background 0.15s, border-color 0.15s;
 }
-.scroll-arrow.up {
-  margin-bottom: 0.5rem;
-}
-.scroll-arrow.down {
-  margin-top: 0.5rem;
+.scroll-arrow:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
 }
 
 .right-section {
@@ -945,8 +1006,31 @@ function handleNotifyMe() {
   .payment-methods {
     order: 1;
   }
-  .main-image {
+  .gallery {
     margin-top: 1rem;
+  }
+  .gallery-layout {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+  }
+  .thumbnails-rail {
+    flex-direction: row;
+    width: 100%;
+    gap: 0.4rem;
+  }
+  .thumbnails-container {
+    flex-direction: row;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0.5rem;
+  }
+  .thumbnail {
+    width: 64px;
+    height: 64px;
+  }
+  .scroll-arrow {
+    display: none;
   }
   .product-name {
     margin-bottom: 1rem;
