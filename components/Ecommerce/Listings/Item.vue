@@ -434,16 +434,17 @@ function trackNavigation(actionType, action = null) {
 .image-container {
   position: relative;
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .product-image {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .sale-ribbon {
   position: absolute;
