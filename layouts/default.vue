@@ -28,8 +28,8 @@
 
     <transition name="cart-transition">
       <EcommerceNavCart
-        v-if="isCartVisible"
-        @close-cart="toggleCartVisibility"
+        v-if="itemStore.isCartOpen"
+        @close-cart="itemStore.toggleCart"
       />
     </transition>
 
@@ -42,7 +42,6 @@
 </template>
 
 <script setup>
-const isCartVisible = ref(false);
 const isNavHidden = ref(false);
 const showMobileNav = ref(false);
 const showLoginModal = ref(false);
@@ -50,11 +49,11 @@ const showLoginModal = ref(false);
 let lastScrollY = 0;
 
 const store = useUserStore();
+const itemStore = useItemStore();
 const isLoggedIn = computed(() => !!store.token);
 
-// Function to toggle cart visibility
 const toggleCartVisibility = () => {
-  isCartVisible.value = !isCartVisible.value;
+  itemStore.toggleCart();
 };
 
 // Toggle mobile nav

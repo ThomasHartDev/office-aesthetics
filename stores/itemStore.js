@@ -10,8 +10,12 @@ export const useItemStore = defineStore('itemStore', () => {
   const error = ref(null);
 
   const lastFetchTime = ref(0);
-  // const CACHE_DURATION = 1000 * 60 * 2; 
-  const CACHE_DURATION = 0; 
+  // const CACHE_DURATION = 1000 * 60 * 2;
+  const CACHE_DURATION = 0;
+
+  const isCartOpen = ref(false);
+  function openCart() { isCartOpen.value = true; }
+  function toggleCart() { isCartOpen.value = !isCartOpen.value; }
 
   const setItems = (newItems) => {
     allItems.value = newItems;
@@ -182,6 +186,9 @@ if (cartItem.variantId) {
     lastFetchTime,
     CACHE_DURATION,
     allItems,
+    isCartOpen,
+    openCart,
+    toggleCart,
     setItems,
     addToCart,
     clearCart,
@@ -193,7 +200,7 @@ if (cartItem.variantId) {
     getItemById,
     getCartItemCount,
     getCartSubtotal,
-    validateCartItems, // Expose the validation function
+    validateCartItems,
   };
 }, {
   persist: {

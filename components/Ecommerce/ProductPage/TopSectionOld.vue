@@ -201,8 +201,7 @@
       <div>
         <div class="item-quantity">
           <button @click="handleDecreaseQuantity">-</button>
-          <p v-if="itemInCart">{{ itemInCart.quantity }}</p>
-          <p v-else>0</p>
+          <p>{{ pendingQuantity }}</p>
           <button @click="handleIncreaseQuantity">+</button>
         </div>
         <div v-if="isOutOfStock" class="notify-wrapper">
@@ -523,112 +522,39 @@ onMounted(() => {
   }
 });
 
-const itemInCart = computed(() => {
-  if (!isLoggedIn.value) {
-    return itemStore.cart.find(
-      (cartItem) =>
-        cartItem._id === localItem.value._id &&
-        cartItem.variantId === selectedVariant.value?._id
-    );
-  } else {
-    return userStore.user.cart.find(
-      (cartItem) =>
-        cartItem._id === localItem.value._id &&
-        cartItem.variantId === selectedVariant.value?._id
-    );
-  }
-});
+const email = ref("");
+const pendingQuantity = ref(1);
 
 function handleIncreaseQuantity() {
-  if (selectedVariant.value) {
-    if (itemInCart.value) {
-      if (!isLoggedIn.value) {
-        itemStore.updateQuantity({
-          itemId: localItem.value._id,
-          variantId: selectedVariant.value._id,
-          quantity: itemInCart.value.quantity + 1,
-        });
-      } else {
-        userStore.updateQuantity({
-          itemId: localItem.value._id,
-          variantId: selectedVariant.value._id,
-          quantity: itemInCart.value.quantity + 1,
-        });
-      }
-    } else {
-      handleAddToCart();
-    }
-  } else {
-    if (itemInCart.value) {
-      if (!isLoggedIn.value) {
-        itemStore.updateQuantity({
-          itemId: localItem.value._id,
-          quantity: itemInCart.value.quantity + 1,
-        });
-      } else {
-        userStore.updateQuantity({
-          itemId: localItem.value._id,
-          quantity: itemInCart.value.quantity + 1,
-        });
-      }
-    } else {
-      handleAddToCart();
-    }
-  }
+  pendingQuantity.value++;
 }
 
 function handleDecreaseQuantity() {
-  if (selectedVariant.value) {
-    if (itemInCart.value && itemInCart.value.quantity > 1) {
-      if (!isLoggedIn.value) {
-        itemStore.updateQuantity({
-          itemId: localItem.value._id,
-          variantId: selectedVariant.value._id,
-          quantity: itemInCart.value.quantity - 1,
-        });
-      } else {
-        userStore.updateQuantity({
-          itemId: localItem.value._id,
-          variantId: selectedVariant.value._id,
-          quantity: itemInCart.value.quantity - 1,
-        });
-      }
-    } else if (itemInCart.value && itemInCart.value.quantity === 1) {
-      removeFromCart(localItem.value._id, selectedVariant.value?._id);
-    }
-  } else {
-    if (itemInCart.value && itemInCart.value.quantity > 1) {
-      if (!isLoggedIn.value) {
-        itemStore.updateQuantity({
-          itemId: localItem.value._id,
-          quantity: itemInCart.value.quantity - 1,
-        });
-      } else {
-        userStore.updateQuantity({
-          itemId: localItem.value._id,
-          quantity: itemInCart.value.quantity - 1,
-        });
-      }
-    } else if (itemInCart.value && itemInCart.value.quantity === 1) {
-      removeFromCart(localItem.value._id);
-    }
-  }
+  if (pendingQuantity.value > 1) pendingQuantity.value--;
 }
 
-function removeFromCart(itemId, variantId) {
-  if (!isLoggedIn.value) {
-    itemStore.removeFromCart(itemId, variantId);
-  } else {
-    userStore.removeFromCart(itemId, variantId);
-  }
-}
-
-function handleAddToCart() {
+async function handleAddToCart() {
   if (!isLoggedIn.value) {
     itemStore.addToCart(localItem.value, selectedVariant.value);
+    if (pendingQuantity.value > 1) {
+      itemStore.updateQuantity({
+        itemId: localItem.value._id,
+        variantId: selectedVariant.value?._id,
+        quantity: pendingQuantity.value,
+      });
+    }
   } else {
-    userStore.addToCart(localItem.value, selectedVariant.value);
+    await userStore.addToCart(localItem.value, selectedVariant.value);
+    if (pendingQuantity.value > 1) {
+      await userStore.updateQuantity({
+        itemId: localItem.value._id,
+        variantId: selectedVariant.value?._id,
+        quantity: pendingQuantity.value,
+      });
+    }
   }
+  pendingQuantity.value = 1;
+  itemStore.openCart();
 }
 
 function handleNotifyMe() {
