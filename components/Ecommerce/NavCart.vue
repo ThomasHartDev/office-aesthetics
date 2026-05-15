@@ -44,16 +44,14 @@
                 </div>
               </div>
               <div class="item-actions">
-                <input
-                  class="item-quantity-input"
-                  type="number"
-                  min="1"
-                  :value="item.quantity"
-                  @change="(e) => updateItemQuantity(item, e.target.value)"
-                />
+                <div class="item-quantity-stepper">
+                  <button @click.stop="updateItemQuantity(item, item.quantity - 1)">-</button>
+                  <span>{{ item.quantity }}</span>
+                  <button @click.stop="updateItemQuantity(item, item.quantity + 1)">+</button>
+                </div>
                 <button
                   class="remove-button"
-                  @click="removeCartItem(item._id, item.variantId)"
+                  @click.stop="removeCartItem(item._id, item.variantId)"
                 >
                   Remove
                 </button>
@@ -560,14 +558,30 @@ async function handleOrderCompleted(orderData) {
   align-items: flex-end;
   justify-content: space-between;
 }
-.item-quantity-input {
-  width: 60px;
-  padding: 0.3rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
+.item-quantity-stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   margin-bottom: 0.5rem;
+}
+.item-quantity-stepper button {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.item-quantity-stepper button:hover {
+  background: #eee;
+}
+.item-quantity-stepper span {
+  min-width: 1.4rem;
+  text-align: center;
+  font-size: 0.95rem;
 }
 .remove-button {
   font-size: 0.9rem;

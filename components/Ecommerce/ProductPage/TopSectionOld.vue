@@ -534,26 +534,12 @@ function handleDecreaseQuantity() {
 }
 
 async function handleAddToCart() {
+  const qty = pendingQuantity.value;
   if (!isLoggedIn.value) {
-    itemStore.addToCart(localItem.value, selectedVariant.value);
-    if (pendingQuantity.value > 1) {
-      itemStore.updateQuantity({
-        itemId: localItem.value._id,
-        variantId: selectedVariant.value?._id,
-        quantity: pendingQuantity.value,
-      });
-    }
+    itemStore.addToCart(localItem.value, selectedVariant.value, qty);
   } else {
-    await userStore.addToCart(localItem.value, selectedVariant.value);
-    if (pendingQuantity.value > 1) {
-      await userStore.updateQuantity({
-        itemId: localItem.value._id,
-        variantId: selectedVariant.value?._id,
-        quantity: pendingQuantity.value,
-      });
-    }
+    await userStore.addToCart(localItem.value, selectedVariant.value, qty);
   }
-  pendingQuantity.value = 1;
   itemStore.openCart();
 }
 

@@ -37,57 +37,50 @@ export const useUserStore = defineStore(
      * - Increments local quantity if item exists, otherwise adds a new item.
      * - Calls "/api/users/cart/add/:id" with the item(s) so the server merges them.
      */
-    const addToCart = async (item, selectedVariant = null) => {
-      // Build the item object
-      // In addToCart (user store example)
+    const addToCart = async (item, selectedVariant = null, qty = 1) => {
       const cartItem = selectedVariant
-      ? {
-          _id: item._id,
-          name: item.name,
-          price: selectedVariant.price || item.price,
-          oldPrice: selectedVariant.oldPrice || item.oldPrice, // Use oldPrice here
-          image: selectedVariant.image || item.image,
-          variantId: selectedVariant._id,
-          color: selectedVariant.color?.name || '',
-          size: selectedVariant.size,
-          material: selectedVariant.material,
-          style: selectedVariant.style,
-          capacity: selectedVariant.capacity,
-          flavor: selectedVariant.flavor,
-          scent: selectedVariant.scent,
-          power: selectedVariant.power,
-          length: selectedVariant.length,
-          region: selectedVariant.region,
-          quantity: 1,
-        }
-      : {
-          _id: item._id,
-          name: item.name,
-          price: item.price,
-          oldPrice: item.oldPrice, // Use oldPrice here as well
-          image: item.image,
-          quantity: 1,
-        };
-    
+        ? {
+            _id: item._id,
+            name: item.name,
+            price: selectedVariant.price || item.price,
+            oldPrice: selectedVariant.oldPrice || item.oldPrice,
+            image: selectedVariant.image || item.image,
+            variantId: selectedVariant._id,
+            color: selectedVariant.color?.name || '',
+            size: selectedVariant.size,
+            material: selectedVariant.material,
+            style: selectedVariant.style,
+            capacity: selectedVariant.capacity,
+            flavor: selectedVariant.flavor,
+            scent: selectedVariant.scent,
+            power: selectedVariant.power,
+            length: selectedVariant.length,
+            region: selectedVariant.region,
+            quantity: qty,
+          }
+        : {
+            _id: item._id,
+            name: item.name,
+            price: item.price,
+            oldPrice: item.oldPrice,
+            image: item.image,
+            quantity: qty,
+          };
 
-
-      // Check if the item already exists in local cart
       const existingItem = user.value.cart.find((i) =>
         cartItem.variantId
           ? i._id === cartItem._id && i.variantId === cartItem.variantId
           : i._id === cartItem._id && !i.variantId
       );
 
-      // Optimistic update (increment or add)
+      // Optimistic update
       if (existingItem) {
-        existingItem.quantity++;
+        existingItem.quantity += qty;
       } else {
         user.value.cart.push(cartItem);
       }
 
-      // Server sync: POST items to /add endpoint
       try {
-        console.log("[addToCart] Sending to API:", { items: [cartItem] });
         const response = await $fetch(
           `/api/users/cart/add/${user.value._id}`,
           {
@@ -95,16 +88,12 @@ export const useUserStore = defineStore(
             body: { items: [cartItem] },
           }
         );
-        console.log("[addToCart] Response from API:", response);
-
-        // Replace local cart with the server response
         user.value.cart = response;
       } catch (err) {
         console.error("Error adding to cart:", err);
         error.value = "Failed to add item to cart. Please try again.";
-        // Revert optimistic update
         if (existingItem) {
-          existingItem.quantity--;
+          existingItem.quantity -= qty;
         } else {
           user.value.cart.pop();
         }

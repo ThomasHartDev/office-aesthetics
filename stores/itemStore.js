@@ -24,49 +24,43 @@ export const useItemStore = defineStore('itemStore', () => {
     validateCartItems();
   };
 
-  const addToCart = (item, selectedVariant = null) => {
-    // In addToCart (user store example)
-const cartItem = selectedVariant
-? {
-    _id: item._id,
-    name: item.name,
-    price: selectedVariant.price || item.price,
-    originalPrice: selectedVariant.oldPrice || item.oldPrice, // NEW
-    image: selectedVariant.image || item.image,
-    variantId: selectedVariant._id,
-    color: selectedVariant.color,
-    size: selectedVariant.size,
-    material: selectedVariant.material,
-    style: selectedVariant.style,
-    capacity: selectedVariant.capacity,
-    flavor: selectedVariant.flavor,
-    scent: selectedVariant.scent,
-    power: selectedVariant.power,
-    length: selectedVariant.length,
-    region: selectedVariant.region,
-    quantity: 1,
-  }
-: {
-    _id: item._id,
-    name: item.name,
-    price: item.price,
-    originalPrice: item.oldPrice, // NEW for consistency
-    image: item.image,
-    quantity: 1,
-  };
-
-
-    // console.log("cartItem: " + JSON.stringify(cartItem));
+  const addToCart = (item, selectedVariant = null, qty = 1) => {
+    const cartItem = selectedVariant
+      ? {
+          _id: item._id,
+          name: item.name,
+          price: selectedVariant.price || item.price,
+          originalPrice: selectedVariant.oldPrice || item.oldPrice,
+          image: selectedVariant.image || item.image,
+          variantId: selectedVariant._id,
+          color: selectedVariant.color,
+          size: selectedVariant.size,
+          material: selectedVariant.material,
+          style: selectedVariant.style,
+          capacity: selectedVariant.capacity,
+          flavor: selectedVariant.flavor,
+          scent: selectedVariant.scent,
+          power: selectedVariant.power,
+          length: selectedVariant.length,
+          region: selectedVariant.region,
+          quantity: qty,
+        }
+      : {
+          _id: item._id,
+          name: item.name,
+          price: item.price,
+          originalPrice: item.oldPrice,
+          image: item.image,
+          quantity: qty,
+        };
 
     const existingItem = cart.value.find(i =>
       i._id === cartItem._id && (selectedVariant ? i.variantId === cartItem.variantId : true)
     );
 
     if (existingItem) {
-      // console.log("Was existing item");
-      existingItem.quantity++;
+      existingItem.quantity += qty;
     } else {
-      // console.log("Was no existing item");
       cart.value.push(cartItem);
     }
   };
