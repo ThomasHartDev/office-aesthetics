@@ -1,36 +1,41 @@
 <template>
-  <div class="wishlist-items">
-    <h2>Wishlist</h2>
-    <p class="displaying">Displaying {{ items.length }} item(s)</p>
+  <div class="wishlist">
+    <div class="page-header">
+      <h1 class="page-title">Wishlist</h1>
+      <p class="page-subtitle">{{ items.length }} item{{ items.length !== 1 ? 's' : '' }} saved</p>
+    </div>
 
-    <!-- Show grid if items exist -->
-    <div v-if="items.length > 0" class="grid-wrapper">
-      <p class="wishlist-message">
-        {{ "Jump back into your wishlist!" }}
-      </p>
-      <div class="wishlist-grid">
-        <div v-for="(item, index) in items" :key="index" class="wishlist-item">
-          <div class="image-container" @click="goToItem(item.item)">
-            <img :src="`/ItemPics/${item.image}`" :alt="item.name" />
-            <div class="overlay">
-              <p class="item-name">{{ item.name }}</p>
-            </div>
+    <div v-if="items.length > 0" class="wishlist-grid">
+      <div v-for="(item, index) in items" :key="index" class="wishlist-card">
+        <div class="card-image" @click="goToItem(item.item)">
+          <img :src="`/ItemPics/${item.image}`" :alt="item.name" />
+          <div class="card-overlay">
+            <span class="overlay-label">View item</span>
           </div>
-          <button
-            class="delete-button"
-            @click.stop="deleteItem(item.item)"
-            aria-label="Remove item"
-          >
-            ✖
-          </button>
+        </div>
+        <div class="card-body">
+          <p class="card-name">{{ item.name }}</p>
+          <div class="card-actions">
+            <button class="btn-view" @click="goToItem(item.item)">View</button>
+            <button class="btn-remove" @click.stop="deleteItem(item.item)" aria-label="Remove from wishlist">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Show message and graphic when no items are in the wishlist -->
-    <div v-else class="empty-wishlist">
-      <img src="/Logos/OALogo.svg" alt="Empty Wishlist" class="empty-graphic" />
-      <p class="empty-message">Your wishlist is currently empty!</p>
+    <div v-else class="empty-state">
+      <div class="empty-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16 27S3 19.667 3 11.5A6.5 6.5 0 0 1 16 7a6.5 6.5 0 0 1 13 4.5C29 19.667 16 27 16 27z" stroke="#d1d5db" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="empty-title">Nothing saved yet</p>
+      <p class="empty-sub">Items you heart will show up here.</p>
+      <NuxtLink to="/" class="btn-primary">Browse products</NuxtLink>
     </div>
   </div>
 </template>
@@ -39,200 +44,185 @@
 const userStore = useUserStore();
 const router = useRouter();
 
-// Access wishlist items from the user store
-const items = computed(() => userStore.user.wishlist);
+const items = computed(() => userStore.user.wishlist || []);
 
-// Navigate to item page
-const goToItem = (id) => {
-  router.push(`/item/${id}`);
-};
+const goToItem = (id) => router.push(`/item/${id}`);
 
-// Delete an item from the wishlist and update the database
 const deleteItem = async (id) => {
-  // Remove the item from the user store's wishlist
-  userStore.user.wishlist = userStore.user.wishlist.filter(
-    (item) => item.item !== id
-  );
-
-  // Update the user in the database
+  userStore.user.wishlist = userStore.user.wishlist.filter(item => item.item !== id);
   try {
     const response = await $fetch(`/api/users/${userStore.user._id}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: userStore.user,
     });
-
     userStore.setUser(response);
-  } catch (error) {
-    console.error("Failed to update wishlist in the database:", error);
-  }
+  } catch {}
 };
 </script>
 
 <style scoped>
-.wishlist-items {
-  font-family: Arial, sans-serif;
-  padding: 2rem;
-  width: 100%;
+.wishlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-h2 {
-  color: white;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.page-header { margin-bottom: 0.25rem; }
+.page-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem;
 }
-
-p.displaying {
-  color: white;
-  font-weight: lighter;
-}
-
-.grid-wrapper {
-  background-color: #f9f9f9;
-  padding: 2rem 3rem;
-  margin-top: 1rem;
-}
-
-.wishlist-message {
-  color: #28a745;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  font-weight: lighter;
-}
+.page-subtitle { font-size: 0.9375rem; color: #6b7280; margin: 0; }
 
 .wishlist-grid {
-  padding-bottom: 0.75rem;
-  border-bottom: 0.25rem solid #d9d9d9;
-  padding-top: 0.75rem;
-  border-top: 0.25rem solid #d9d9d9;
-  margin-top: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
 }
 
-.wishlist-item {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.wishlist-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
   overflow: hidden;
-  background: white;
-  cursor: pointer;
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
+  transition: box-shadow 0.15s;
+}
+.wishlist-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
-.wishlist-item:hover {
-  transform: scale(0.95);
-}
-
-.image-container {
+.card-image {
   position: relative;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
   overflow: hidden;
+  cursor: pointer;
 }
-
-.image-container img {
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
-
-.wishlist-item:hover .image-container img {
-  transform: scale(0.95);
+.wishlist-card:hover .card-image img {
+  transform: scale(1.04);
 }
-
-.overlay {
+.card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.15s;
 }
-
-.wishlist-item:hover .overlay {
+.card-image:hover .card-overlay {
   opacity: 1;
 }
-
-.item-name {
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
+.overlay-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-/* Delete Button */
-.delete-button {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background: red;
-  color: white;
+.card-body {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.card-name {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #374151;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+}
+.btn-view {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #3f654c;
+  background: #f0f5f2;
   border: none;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  padding: 0.3rem 0.625rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-view:hover { background: #e1ede6; }
+.btn-remove {
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: transform 0.3s ease, background 0.3s ease;
+  color: #9ca3af;
+  transition: all 0.15s;
+}
+.btn-remove:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
 }
 
-.delete-button:hover {
-  transform: scale(1.2);
-  background: darkred;
-}
-
-/* Empty wishlist styles */
-.empty-wishlist {
+/* Empty state */
+.empty-state {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
   text-align: center;
-  margin-top: 2rem;
 }
+.empty-icon { margin-bottom: 0.5rem; }
+.empty-title { font-weight: 600; color: #374151; font-size: 1rem; margin: 0; }
+.empty-sub { color: #9ca3af; font-size: 0.875rem; margin: 0; }
 
-.empty-graphic {
-  width: 150px;
-  height: auto;
-  margin-bottom: 1rem;
+.btn-primary {
+  margin-top: 0.5rem;
+  background: #3f654c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 7px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.15s;
 }
+.btn-primary:hover { background: #2e5039; }
 
-.empty-message {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .wishlist-items {
-    padding: 4rem 1rem;
-  }
-
-  .empty-graphic {
-    width: 120px;
-  }
-
-  .empty-message {
-    font-size: 1.2rem;
+@media (max-width: 600px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
 }
 </style>

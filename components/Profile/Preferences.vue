@@ -1,6 +1,5 @@
 <template>
-  <div class="wrapper">
-    <!-- Notification Popup -->
+  <div class="preferences">
     <SubcomponentsNotificationPopup
       v-if="notificationMessage"
       :message="notificationMessage"
@@ -8,145 +7,127 @@
       @close-popup="notificationMessage = null"
     />
 
-    <!-- Profile Image and Edit Section -->
-    <div class="top-image-banner">
-      <div class="overlay">
-        <div class="profile-image-wrapper" @click="triggerFileInput">
-          <img
-            class="profile-image"
-            :src="userStore.user.profilePicture || '/Logos/OALogo.svg'"
-            alt="Profile Image"
-          />
-          <div class="edit-icon">
-            <img src="/Graphics/EditPencil.svg" alt="Edit Icon" />
+    <!-- Page header -->
+    <div class="page-header">
+      <h1 class="page-title">Profile</h1>
+      <p class="page-subtitle">Manage your account details and preferences.</p>
+    </div>
+
+    <!-- Avatar card -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Profile Photo</h2>
+      </div>
+      <div class="card-body avatar-section">
+        <div class="avatar-wrapper" @click="triggerFileInput">
+          <div class="avatar">
+            <img
+              v-if="userStore.user.profilePicture"
+              :src="userStore.user.profilePicture"
+              alt="Profile"
+              class="avatar-img"
+            />
+            <span v-else class="avatar-initials">{{ initials }}</span>
           </div>
-          <!-- Hidden file input for selecting images -->
-          <input
-            type="file"
-            ref="fileInput"
-            class="file-input"
-            @change="uploadImage"
-            accept="image/*"
-          />
+          <div class="avatar-overlay">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 12.5V14h1.5l7-7L9 5.5l-7 7zm11.3-8.8a1 1 0 0 0 0-1.41l-1.6-1.6a1 1 0 0 0-1.41 0L9 2l3 3 1.3-1.3z" fill="white"/>
+            </svg>
+          </div>
+          <input type="file" ref="fileInput" class="file-input" @change="uploadImage" accept="image/*" />
+        </div>
+        <div class="avatar-info">
+          <p class="avatar-name">{{ userStore.user.name }}</p>
+          <p class="avatar-email">{{ userStore.user.email }}</p>
+          <button class="btn-secondary-sm" @click="triggerFileInput">Change photo</button>
         </div>
       </div>
     </div>
 
-    <!-- Manage Your Account Banner -->
-    <div class="manage-account-banner">
-      <p>Manage Your Account</p>
-    </div>
-
-    <!-- Manage Your Account Fields (Two Columns) -->
-    <div class="account-section">
-      <div class="input-grid two-columns">
-        <div class="input-field">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            :value="userStore.user.email"
-            disabled
-            class="disabled-field"
-          />
+    <!-- Account security -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Account Security</h2>
+      </div>
+      <div class="card-body">
+        <div class="form-grid cols-2">
+          <div class="field">
+            <label class="field-label">Email address</label>
+            <input type="email" :value="userStore.user.email" disabled class="field-input disabled" />
+          </div>
+          <div class="field">
+            <label class="field-label">New password</label>
+            <input type="password" v-model="password" class="field-input" placeholder="Enter new password" />
+          </div>
+          <div class="field">
+            <label class="field-label">Confirm new password</label>
+            <input type="password" v-model="confirmPassword" class="field-input" placeholder="Confirm new password" />
+          </div>
         </div>
-
-        <div class="input-field">
-          <label for="new-password">New Password</label>
-          <input type="password" id="new-password" v-model="password" />
-        </div>
-        <div class="input-field">
-          <label for="confirm-password">Confirm New Password</label>
-          <input
-            type="password"
-            id="confirm-password"
-            v-model="confirmPassword"
-          />
+        <div class="card-footer">
+          <button class="btn-primary" @click="saveAccountChanges">Save changes</button>
         </div>
       </div>
-      <button class="confirm-button" @click="saveAccountChanges">
-        Confirm Changes
-      </button>
     </div>
 
-    <!-- Personal Section Banner -->
-    <div class="section-banner">
-      <p>Personal</p>
-    </div>
-
-    <!-- Personal Fields (Three Columns) -->
-    <div class="personal-section">
-      <div class="input-grid three-columns">
-        <div class="input-field">
-          <label for="first-name">Full Name</label>
-          <input type="text" id="first-name" v-model="userStore.user.name" />
+    <!-- Personal info -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Personal Information</h2>
+      </div>
+      <div class="card-body">
+        <div class="form-grid cols-3">
+          <div class="field">
+            <label class="field-label">Full name</label>
+            <input type="text" v-model="userStore.user.name" class="field-input" />
+          </div>
+          <div class="field">
+            <label class="field-label">Preferred name</label>
+            <input type="text" v-model="userStore.user.preferredName" class="field-input" />
+          </div>
+          <div class="field">
+            <label class="field-label">Date of birth</label>
+            <input type="date" v-model="formattedDateOfBirth" class="field-input" />
+          </div>
         </div>
-        <div class="input-field">
-          <label for="preferred-name">Preferred Name</label>
-          <input
-            type="text"
-            id="preferred-name"
-            v-model="userStore.user.preferredName"
-          />
-        </div>
-        <div class="input-field">
-          <label for="dob">Date of Birth</label>
-          <input type="date" id="dob" v-model="formattedDateOfBirth" />
+        <div class="card-footer">
+          <button class="btn-primary" @click="savePersonalChanges">Save changes</button>
         </div>
       </div>
-      <button class="confirm-button" @click="savePersonalChanges">
-        Confirm Changes
-      </button>
     </div>
 
-    <!-- Contact Section Banner -->
-    <div class="section-banner">
-      <p>Contact</p>
-    </div>
-
-    <!-- Contact Fields (Three Columns) -->
-    <div class="contact-section">
-      <div class="input-grid three-columns">
-        <div class="input-field">
-          <label for="phone-number">Phone Number</label>
-          <input
-            type="tel"
-            id="phone-number"
-            v-model="userStore.user.contact.phone"
-          />
+    <!-- Contact -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Contact &amp; Address</h2>
+      </div>
+      <div class="card-body">
+        <div class="form-grid cols-3">
+          <div class="field">
+            <label class="field-label">Phone number</label>
+            <input type="tel" v-model="userStore.user.contact.phone" class="field-input" />
+          </div>
+          <div class="field col-span-2">
+            <label class="field-label">Street address</label>
+            <input type="text" v-model="userStore.user.contact.street" class="field-input" />
+          </div>
+          <div class="field">
+            <label class="field-label">City</label>
+            <input type="text" v-model="userStore.user.contact.city" class="field-input" />
+          </div>
+          <div class="field">
+            <label class="field-label">State</label>
+            <input type="text" v-model="userStore.user.contact.state" class="field-input" />
+          </div>
+          <div class="field">
+            <label class="field-label">ZIP code</label>
+            <input type="text" v-model="userStore.user.contact.zip" class="field-input" />
+          </div>
         </div>
-        <div class="input-field">
-          <label for="address">Address</label>
-          <input
-            type="text"
-            id="address"
-            v-model="userStore.user.contact.street"
-          />
-        </div>
-        <div class="input-field">
-          <label for="city">City</label>
-          <input type="text" id="city" v-model="userStore.user.contact.city" />
-        </div>
-        <div class="input-field">
-          <label for="state">State</label>
-          <input
-            type="text"
-            id="state"
-            v-model="userStore.user.contact.state"
-          />
-        </div>
-        <div class="input-field">
-          <label for="zip-code">Zip Code</label>
-          <input
-            type="text"
-            id="zip-code"
-            v-model="userStore.user.contact.zip"
-          />
+        <div class="card-footer">
+          <button class="btn-primary" @click="saveContactChanges">Save changes</button>
         </div>
       </div>
-      <button class="confirm-button" @click="saveContactChanges">
-        Confirm Changes
-      </button>
     </div>
   </div>
 </template>
@@ -159,7 +140,11 @@ const confirmPassword = ref("");
 const notificationMessage = ref("");
 const notificationType = ref("info");
 
-// Computed property to format the date for the input field
+const initials = computed(() => {
+  const name = userStore.user?.name || "";
+  return name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase() || "U";
+});
+
 const formattedDateOfBirth = computed({
   get() {
     return userStore.user?.dateOfBirth
@@ -171,110 +156,73 @@ const formattedDateOfBirth = computed({
   },
 });
 
-// Trigger the hidden file input
-const triggerFileInput = () => {
-  fileInput.value.click();
-};
+const triggerFileInput = () => fileInput.value.click();
 
-// Upload the image to S3 via the API route
 const uploadImage = async (event) => {
   const file = event.target.files[0];
   if (!file) return;
-
   const oldProfilePicture = userStore.user.profilePicture;
-
   try {
     const formData = new FormData();
     formData.append("file", file);
-
-    const response = await $fetch("/api/aws/upload", {
-      method: "POST",
-      body: formData,
-    });
-
+    const response = await $fetch("/api/aws/upload", { method: "POST", body: formData });
     if (response?.url) {
-      const newImageUrl = response.url;
-
-      try {
-        const userResponse = await $fetch(`/api/users/${userStore.user._id}`, {
-          method: "PUT",
-          body: { profilePicture: newImageUrl },
-        });
-
-        userStore.setUser(userResponse);
-
-        if (oldProfilePicture) {
-          try {
-            const oldKey = oldProfilePicture.split("/").pop();
-            await $fetch("/api/aws/upload", {
-              method: "DELETE",
-              body: { key: oldKey },
-            });
-          } catch (deleteError) {
-            showNotification(
-              "New profile image uploaded, but failed to delete the old one.",
-              "warning"
-            );
-          }
-        }
-
-        showNotification("Profile image updated successfully!", "success");
-      } catch (updateError) {
-        showNotification("Error updating user profile image.", "error");
-      }
-    }
-  } catch (uploadError) {
-    showNotification("Failed to upload image.", "error");
-  }
-};
-
-// Save Account Changes
-const saveAccountChanges = async () => {
-  if (password.value == confirmPassword.value) {
-    try {
       const userResponse = await $fetch(`/api/users/${userStore.user._id}`, {
         method: "PUT",
-        body: { password: password.value },
+        body: { profilePicture: response.url },
       });
       userStore.setUser(userResponse);
-      showNotification("Account changes saved successfully!", "success");
-    } catch (error) {
-      showNotification("Error updating account changes.", "error");
+      if (oldProfilePicture) {
+        try {
+          await $fetch("/api/aws/upload", { method: "DELETE", body: { key: oldProfilePicture.split("/").pop() } });
+        } catch {}
+      }
+      showNotification("Profile photo updated!", "success");
     }
-  } else {
-    showNotification("Passwords don't match", "error");
+  } catch {
+    showNotification("Failed to upload photo.", "error");
   }
 };
 
-// Save Personal Changes
+const saveAccountChanges = async () => {
+  if (password.value !== confirmPassword.value) {
+    showNotification("Passwords don't match", "error");
+    return;
+  }
+  try {
+    const userResponse = await $fetch(`/api/users/${userStore.user._id}`, {
+      method: "PUT",
+      body: { password: password.value },
+    });
+    userStore.setUser(userResponse);
+    password.value = "";
+    confirmPassword.value = "";
+    showNotification("Password updated!", "success");
+  } catch {
+    showNotification("Error updating password.", "error");
+  }
+};
+
 const savePersonalChanges = async () => {
   try {
-    const userResponse = await $fetch(`/api/users/${userStore.user._id}`, {
-      method: "PUT",
-      body: userStore.user,
-    });
+    const userResponse = await $fetch(`/api/users/${userStore.user._id}`, { method: "PUT", body: userStore.user });
     userStore.setUser(userResponse);
-    showNotification("Personal details updated successfully!", "success");
-  } catch (error) {
-    showNotification("Error updating personal changes.", "error");
+    showNotification("Personal info updated!", "success");
+  } catch {
+    showNotification("Error saving changes.", "error");
   }
 };
 
-// Save Contact Changes
 const saveContactChanges = async () => {
   try {
-    const userResponse = await $fetch(`/api/users/${userStore.user._id}`, {
-      method: "PUT",
-      body: userStore.user,
-    });
+    const userResponse = await $fetch(`/api/users/${userStore.user._id}`, { method: "PUT", body: userStore.user });
     userStore.setUser(userResponse);
-    showNotification("Contact details updated successfully!", "success");
-  } catch (error) {
-    showNotification("Error updating contact changes.", "error");
+    showNotification("Contact info updated!", "success");
+  } catch {
+    showNotification("Error saving changes.", "error");
   }
 };
 
-// Show Notification
 const showNotification = (message, type) => {
   notificationMessage.value = message;
   notificationType.value = type;
@@ -282,205 +230,192 @@ const showNotification = (message, type) => {
 </script>
 
 <style scoped>
-.wrapper {
-  position: relative;
-  /* overflow: auto; */
-}
-
-/* Profile Image Section */
-.top-image-banner {
-  width: 100%;
-  height: 17.25rem;
-  background: url("/BlogPics/BlogPic1.webp") center center/cover no-repeat;
-  position: relative;
+.preferences {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-.top-image-banner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0)
-    ),
-    rgba(255, 128, 0, 0.3);
-  pointer-events: none;
+.page-header { margin-bottom: 0.25rem; }
+.page-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem;
+}
+.page-subtitle {
+  font-size: 0.9375rem;
+  color: #6b7280;
+  margin: 0;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+.card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+.card-body {
+  padding: 1.5rem;
+}
+.card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f3f4f6;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
 }
 
-.profile-image-wrapper {
+/* Avatar section */
+.avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.avatar-wrapper {
   position: relative;
   cursor: pointer;
-  width: 12rem !important;
-  height: 12rem !important;
-  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #e8f0ec;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 10;
+  justify-content: center;
 }
-
-.profile-image-wrapper:hover {
-  transform: scale(1.05);
-}
-
-.profile-image {
+.avatar-img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 4px solid white;
   object-fit: cover;
-  transition: border-color 0.3s ease-in-out;
 }
-
-.profile-image-wrapper:hover .profile-image {
-  border-color: rgba(255, 255, 255, 0.8);
+.avatar-initials {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3f654c;
+  font-family: "Poppins", sans-serif;
 }
-
-.edit-icon {
+.avatar-overlay {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: white;
+  inset: 0;
   border-radius: 50%;
-  padding: 0.4rem;
-  cursor: pointer;
+  background: rgba(0,0,0,0.45);
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease-in-out;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s;
 }
-
-.edit-icon img {
-  width: 1rem;
-  height: 1rem;
+.avatar-wrapper:hover .avatar-overlay {
+  opacity: 1;
 }
-
-.file-input {
-  display: none;
+.file-input { display: none; }
+.avatar-name {
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
 }
-
-/* Banner Styles */
-.manage-account-banner,
-.section-banner {
-  background-color: #3f654c;
-  color: white;
-  text-align: left;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
+.avatar-email {
+  color: #9ca3af;
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
 }
+.avatar-info { display: flex; flex-direction: column; }
 
-.account-section,
-.personal-section,
-.contact-section {
-  padding: 1rem;
-  background-color: #f0f0f0;
-}
-
-.input-grid.two-columns,
-.input-grid.three-columns {
+/* Form grid */
+.form-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1rem 1.25rem;
 }
+.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.col-span-2 { grid-column: span 2; }
 
-.input-grid.two-columns {
-  grid-template-columns: repeat(2, 1fr);
+/* Fields */
+.field { display: flex; flex-direction: column; gap: 0.375rem; }
+.field-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.01em;
 }
-
-.input-grid.three-columns {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.input-field {
-  margin-bottom: 1rem;
-}
-
-.input-field label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.input-field input {
+.field-input {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #111827;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  box-sizing: border-box;
+}
+.field-input:focus {
+  border-color: #3f654c;
+  box-shadow: 0 0 0 3px rgba(63, 101, 76, 0.1);
+}
+.field-input.disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
 }
 
-.disabled-field {
-  background-color: #f0f0f0;
-  color: #aaa;
-  pointer-events: none;
-}
-
-.confirm-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 0.5rem 1rem;
+/* Buttons */
+.btn-primary {
+  background: #3f654c;
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
   cursor: pointer;
-  font-weight: bold;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background 0.15s;
 }
+.btn-primary:hover { background: #2e5039; }
 
-.confirm-button:hover {
-  background-color: #45a049;
+.btn-secondary-sm {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+  align-self: flex-start;
 }
+.btn-secondary-sm:hover { background: #e5e7eb; }
 
 @media (max-width: 768px) {
-  .input-grid.two-columns,
-  .input-grid.three-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .top-image-banner {
-    height: 14rem;
-  }
-
-  .profile-image-wrapper {
-    width: 10rem !important;
-    height: 10rem !important;
-  }
-
-  .confirm-button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .top-image-banner {
-    height: 12rem;
-  }
-
-  .profile-image-wrapper {
-    width: 8rem !important;
-    height: 8rem !important;
-  }
-
-  .input-field input {
-    padding: 0.4rem;
-  }
+  .cols-2, .cols-3 { grid-template-columns: 1fr; }
+  .col-span-2 { grid-column: span 1; }
+  .card-body { padding: 1rem; }
+  .avatar-section { flex-direction: column; align-items: flex-start; }
+  .card-footer { justify-content: stretch; }
+  .btn-primary { width: 100%; }
 }
 </style>
