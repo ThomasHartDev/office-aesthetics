@@ -6,7 +6,7 @@
       @close-mobile-nav="closeMobileNav"
       @open-login-modal="openLoginModal"
       @close-login-modal="closeLoginModal"
-      :class="{ 'nav-hidden': isNavHidden, 'nav-visible': !isNavHidden }"
+      :class="{ 'nav-hidden': isNavHidden, 'nav-visible': !isNavHidden, 'nav-profile': isProfilePage }"
     />
 
     <!-- MOBILE NAV OVERLAY COMPONENT -->
@@ -43,6 +43,8 @@
 
 <script setup>
 const isNavHidden = ref(false);
+const route = useRoute();
+const isProfilePage = computed(() => route.path === '/profile');
 const showMobileNav = ref(false);
 const showLoginModal = ref(false);
 
@@ -176,5 +178,10 @@ onUnmounted(() => {
 .cart-transition-leave-to {
   transform: translateX(100%);
   opacity: 0;
+}
+
+.nav-profile {
+  box-shadow: none !important;
+  border-bottom: 1px solid #e5e7eb;
 }
 </style>

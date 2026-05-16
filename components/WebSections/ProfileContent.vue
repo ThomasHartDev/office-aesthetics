@@ -154,6 +154,10 @@ const sectionLabel = computed(() => sectionLabels[props.currentSection] || "Prof
   opacity: 0;
 }
 
+@media (min-width: 769px) {
+  .mobile-overlay { display: none; }
+}
+
 @media (max-width: 768px) {
   .mobile-topbar {
     display: flex;
