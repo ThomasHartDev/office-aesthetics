@@ -1,17 +1,21 @@
 <template>
   <div class="wrapper">
+    <div v-if="!item" class="not-found">
+      <h1>Product not found</h1>
+      <NuxtLink to="/">Back to shop</NuxtLink>
+    </div>
     <!-- Top Section: Image, Basic Info, Cart -->
-    <EcommerceProductPageTopSectionOld :item="item" />
+    <EcommerceProductPageTopSectionOld v-else :item="item" />
 
     <!-- Info Graphic Section with Background Image and Dark Overlay -->
-    <div class="info-graphic">
+    <div v-if="item" class="info-graphic">
       <div class="info-text">
         <h2>@aestheticas</h2>
         <h3>A taste of luxury</h3>
       </div>
     </div>
 
-    <div class="review-section">
+    <div v-if="item" class="review-section">
       <ReviewSection
         :itemId="item._id"
         :itemName="item.name"
@@ -78,6 +82,21 @@ emit("hide-loading");
 .wrapper {
   font-family: "Roboto", sans-serif;
   background: white;
+}
+.not-found {
+  max-width: 600px;
+  margin: 6rem auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.not-found h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+.not-found a {
+  color: #3f654c;
+  font-weight: 600;
 }
 
 .info-graphic {

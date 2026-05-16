@@ -13,9 +13,8 @@ export const catalog = [
     description:
       "A mid-century writing desk built from a single American walnut slab and finished by hand over five days. The brass-capped legs and concealed cable channel keep the surface uncluttered so the wood does the talking. Built to outlast you.",
     images: [
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89",
-      "https://images.unsplash.com/photo-1497366412874-3415097a27e7",
+      "https://images.unsplash.com/photo-1575318633968-0383e7d07ca0",
+      "https://images.unsplash.com/photo-1597072689227-8882273e8f6a",
     ],
     stock: 14,
     reviewCount: 47,
@@ -30,9 +29,8 @@ export const catalog = [
     description:
       "A standing desk that doesn't look like a standing desk. Dual-motor lift travels 27 to 46 inches in 12 seconds at 47 dB — quieter than a dishwasher. White oak veneer top, powder-coated steel frame, four programmable height presets.",
     images: [
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
-      "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
+      "https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2",
+      "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7",
     ],
     stock: 23,
     reviewCount: 134,
@@ -47,8 +45,8 @@ export const catalog = [
     description:
       "A drum-cut Carrara marble top sits on a brushed brass tripod base. Each piece has its own veining — yours will not look like the photo, and that's the point. Sealed with a food-safe matte finish.",
     images: [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      "https://images.unsplash.com/photo-1704655295066-681e61ecca6b",
+      "https://images.unsplash.com/photo-1563253746-350a0a877afa",
     ],
     stock: 8,
     reviewCount: 6,
@@ -63,8 +61,8 @@ export const catalog = [
     description:
       "An L-shaped desk in solid white ash with a raw-oil finish. The return gives you a full monitor zone plus a dedicated writing surface. Cable grommet, powder-coated steel legs, and a suspended lower shelf for CPU or books.",
     images: [
-      "https://images.unsplash.com/photo-1593642634524-b40b5baae6bb",
-      "https://images.unsplash.com/photo-1629798825999-9a2b43bef9ac",
+      "https://images.unsplash.com/photo-1594580701468-e5678582b8ce",
+      "https://images.unsplash.com/photo-1605436247078-f0ef43ee8d5c",
     ],
     stock: 7,
     reviewCount: 18,
@@ -79,8 +77,8 @@ export const catalog = [
     description:
       "A fold-down wall desk in 18 mm Baltic birch. Opens to a 36 by 20 inch surface, folds flush to 5 inches off the wall. Hidden hardware, two diagonal support legs that pin flush to the underside when open. Comes with all anchors.",
     images: [
-      "https://images.unsplash.com/photo-1600494448853-ca7b5b7e1f49",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f",
+      "https://images.unsplash.com/photo-1595351475754-8a520e0bc3a3",
+      "https://images.unsplash.com/photo-1625107399301-a78ae8d2a1fe",
     ],
     stock: 19,
     reviewCount: 9,
@@ -95,8 +93,8 @@ export const catalog = [
     description:
       "A two-tier bamboo riser that puts your monitor at eye level and gives you an accessory deck underneath for a keyboard, notebook, or phone. Solid bamboo, no particleboard. Felt-padded base.",
     images: [
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
-      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
+      "https://images.unsplash.com/photo-1677100091644-53575a136cfb",
+      "https://images.unsplash.com/photo-1677100091694-a09a1e468a7b",
     ],
     stock: 44,
     reviewCount: 31,
@@ -113,9 +111,8 @@ export const catalog = [
     description:
       "An ergonomic chair built around your lower back. The adaptive lumbar tracks you as you shift; the breathable mesh keeps you cool through a six-hour stretch. Five-star aluminum base, BIFMA-certified for 300 lbs, twelve-year warranty.",
     images: [
-      "https://images.unsplash.com/photo-1688578735427-994ecdea3ea4",
-      "https://images.unsplash.com/photo-1594235048794-fae8583a5af5",
-      "https://images.unsplash.com/photo-1572521165329-b197f9ea3da6",
+      "https://images.unsplash.com/photo-1616144046096-4eb12ab5ea7b",
+      "https://images.unsplash.com/photo-1616144049673-799a1a9c2f10",
     ],
     stock: 31,
     reviewCount: 312,
@@ -130,9 +127,8 @@ export const catalog = [
     description:
       "Full-grain Tuscan leather over a hardwood frame. The seat softens after about thirty hours of use and keeps developing for a decade. Hand-stitched seams, solid walnut armrests, polished aluminum base.",
     images: [
-      "https://images.unsplash.com/photo-1505797149-43b0069ec26b",
-      "https://images.unsplash.com/photo-1646154034833-d10291080448",
-      "https://images.unsplash.com/photo-1666005368598-2164c0e486c8",
+      "https://images.unsplash.com/photo-1639690404055-29bd387a7542",
+      "https://images.unsplash.com/photo-1758607010203-d6b7f6ec9262",
     ],
     stock: 5,
     reviewCount: 28,
@@ -147,8 +143,8 @@ export const catalog = [
     description:
       "A reading chair for the corner of the office that never gets used enough. Belgian linen over a solid ash frame, with a removable washable cover. The seat is deep enough to fold your legs under you.",
     images: [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-      "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea",
+      "https://images.unsplash.com/photo-1776548759492-3355a285f68f",
+      "https://images.unsplash.com/photo-1776548759455-310ef8cd49ec",
     ],
     stock: 17,
     reviewCount: 19,
@@ -163,8 +159,8 @@ export const catalog = [
     description:
       "A kneeling chair in solid birch with a rockered base, so you can shift between sitting tall and rocking forward without effort. Wool-blend pad, height-adjustable shin rest. Eliminates the lower-back arch most desk chairs force.",
     images: [
-      "https://images.unsplash.com/photo-1580480055273-228ff5388ef8",
-      "https://images.unsplash.com/photo-1604671801908-6f0c6a092c05",
+      "https://images.unsplash.com/photo-1776548759598-aa916464ed1f",
+      "https://images.unsplash.com/photo-1776548759593-6fa64c60129f",
     ],
     stock: 12,
     reviewCount: 44,
@@ -179,8 +175,8 @@ export const catalog = [
     description:
       "A height-adjustable drafting stool with a 360° swivel and a chrome foot ring at three heights. The saddle-curved seat reduces hip flexion during long standing-desk sessions. Vegan leather, wipe-clean.",
     images: [
-      "https://images.unsplash.com/photo-1519455953755-af066f52f1a6",
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
+      "https://images.unsplash.com/photo-1776548759644-5da0988a7874",
+      "https://images.unsplash.com/photo-1776548759448-499e26792d83",
     ],
     stock: 21,
     reviewCount: 16,
@@ -195,8 +191,8 @@ export const catalog = [
     description:
       "A reclining office chair that goes to 140° so you can decompress between calls. Lumbar heat pad, detachable padded headrest, footrest that extends as the back reclines. Breathable mesh back, leather seat.",
     images: [
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
-      "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea",
+      "https://images.unsplash.com/photo-1762423992203-552b7c671b92",
+      "https://images.unsplash.com/photo-1765765419166-3bf1af848951",
     ],
     stock: 9,
     reviewCount: 37,
@@ -213,9 +209,8 @@ export const catalog = [
     description:
       "A 34-inch ultrawide tuned for color work. 5120×2160, 98% DCI-P3, factory-calibrated to Delta E under 2. Thunderbolt 4 in, 90W charging out, three USB-C downstream. Anti-glare matte coat.",
     images: [
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf",
-      "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
-      "https://images.unsplash.com/photo-1593642532559-2b1e33a14a7e",
+      "https://images.unsplash.com/photo-1614624533048-a9c2f9cb5a96",
+      "https://images.unsplash.com/photo-1636736565150-5c927372cbca",
     ],
     stock: 22,
     reviewCount: 86,
@@ -230,8 +225,8 @@ export const catalog = [
     description:
       "An anodized aluminum mouse sculpted to disappear under your palm. Pairs with up to three devices, switches with a tap on the underside. Single AA gives you about 90 days. Silent click switches.",
     images: [
-      "https://images.unsplash.com/photo-1527814050087-3793815479db",
-      "https://images.unsplash.com/photo-1660491083562-d91a64d6ea9c",
+      "https://images.unsplash.com/photo-1647790292957-c7f3b44b3973",
+      "https://images.unsplash.com/photo-1588746363141-364bcdd1d04d",
     ],
     stock: 64,
     reviewCount: 211,
@@ -246,9 +241,8 @@ export const catalog = [
     description:
       "A 75% layout in a CNC-milled walnut case. Hot-swappable sockets, lubed linear switches out of the box, PBT keycaps with side-printed legends. Connects over Bluetooth, USB-C, or 2.4 GHz wireless.",
     images: [
-      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef",
-      "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+      "https://images.unsplash.com/photo-1696260097215-3bcfc3e198c2",
+      "https://images.unsplash.com/photo-1599404062969-0a81537dfd80",
     ],
     stock: 18,
     reviewCount: 73,
@@ -263,8 +257,8 @@ export const catalog = [
     description:
       "An aluminum Thunderbolt 4 dock with 11 ports: 3× Thunderbolt 4, 4× USB-A, 2× USB-C, SD slot, 3.5mm audio, and Gigabit Ethernet. Charges your laptop at 96W. Supports two 4K displays at 60 Hz simultaneously.",
     images: [
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
+      "https://images.unsplash.com/photo-1549907062-15122f762606",
+      "https://images.unsplash.com/photo-1761446812468-d88eef0d01da",
     ],
     stock: 33,
     reviewCount: 58,
@@ -279,8 +273,8 @@ export const catalog = [
     description:
       "A 4K webcam with a 90-degree lens that captures your full workspace. AI auto-framing keeps you centered as you move. Two built-in noise-canceling mics, USB-C plug-and-play, works with any conferencing app.",
     images: [
-      "https://images.unsplash.com/photo-1616161560417-2b3dd9d4ae4a",
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
+      "https://images.unsplash.com/photo-1759322945173-76b604965b2f",
+      "https://images.unsplash.com/photo-1770899621442-24237af4c8b4",
     ],
     stock: 26,
     reviewCount: 42,
@@ -295,8 +289,8 @@ export const catalog = [
     description:
       "A 15.6-inch IPS portable monitor that runs and charges over a single USB-C cable. 1920×1080, 800:1 contrast, 60 Hz. Magnetic cover doubles as a stand. Thin as a pencil.",
     images: [
-      "https://images.unsplash.com/photo-1593642534315-48f5414c3ad9",
-      "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9",
+      "https://images.unsplash.com/photo-1686634369724-6fedf791a8bf",
+      "https://images.unsplash.com/photo-1764025130362-0162c3dd2035",
     ],
     stock: 15,
     reviewCount: 29,
@@ -311,8 +305,8 @@ export const catalog = [
     description:
       "A slim charging pad in matte aluminum that charges your phone at 15W and your earbuds simultaneously. Works with any Qi device. LED indicator dims after 30 seconds so it doesn't distract at night.",
     images: [
-      "https://images.unsplash.com/photo-1615526675259-025a6691f3a4",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1773525911805-bebab1d3e0e4",
+      "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
     ],
     stock: 87,
     reviewCount: 94,
@@ -329,9 +323,8 @@ export const catalog = [
     description:
       "Open-back reference headphones tuned for long sessions. 40 mm beryllium-coated drivers, wool-felt ear cushions, replaceable cable. Not loud enough for the train. Perfectly loud for the desk.",
     images: [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
-      "https://images.unsplash.com/photo-1545127398-14699f92334b",
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944",
     ],
     stock: 12,
     reviewCount: 41,
@@ -346,8 +339,8 @@ export const catalog = [
     description:
       "A six-microphone beam-forming array in a linen-wrapped enclosure that doesn't look like office hardware. Picks up a full room without the boomy echo most speakerphones add. USB-C and Bluetooth.",
     images: [
-      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
-      "https://images.unsplash.com/photo-1589256469067-ea99122bbdc4",
+      "https://images.unsplash.com/photo-1585298723682-7115561c51b7",
+      "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b",
     ],
     stock: 9,
     reviewCount: 3,
@@ -362,8 +355,8 @@ export const catalog = [
     description:
       "A side-address condenser microphone with a cardioid polar pattern that rejects room noise behind it. 24-bit, 96 kHz USB audio, direct headphone monitoring at zero latency. Matte black with a brass-ringed capsule.",
     images: [
-      "https://images.unsplash.com/photo-1598743400863-0201c7e1445b",
-      "https://images.unsplash.com/photo-1612367703022-e66c649e5abb",
+      "https://images.unsplash.com/photo-1713801129175-8e60c67e0412",
+      "https://images.unsplash.com/photo-1483032469466-b937c425697b",
     ],
     stock: 19,
     reviewCount: 67,
@@ -378,8 +371,8 @@ export const catalog = [
     description:
       "A solid brass card stand that holds about thirty business cards at a slight backward tilt. No coating — it patinas with your desk over years. Heavy enough to stay put one-handed.",
     images: [
-      "https://images.unsplash.com/photo-1586281380426-83e9cfe0c5f0",
-      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e",
+      "https://images.unsplash.com/photo-1533225307893-db39ecce099a",
+      "https://images.unsplash.com/photo-1585771724684-38269d6639fd",
     ],
     stock: 58,
     reviewCount: 11,
@@ -394,8 +387,8 @@ export const catalog = [
     description:
       "In-ear ANC earbuds that cut broadband noise by 35 dB. Eight hours per charge, 32 with the case. Multipoint lets them stay paired to your laptop and phone simultaneously. IPX5 water resistant.",
     images: [
-      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
-      "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b",
+      "https://images.unsplash.com/photo-1531860898813-8cecde84646c",
+      "https://images.unsplash.com/photo-1658927420987-488ade098001",
     ],
     stock: 41,
     reviewCount: 128,
@@ -412,9 +405,8 @@ export const catalog = [
     description:
       "A bound journal with a vegetable-tanned cover that softens and darkens with use. 240 dotted pages on 100 gsm cream stock, smooth enough for fountain pens. Lays flat the day you open it.",
     images: [
-      "https://images.unsplash.com/photo-1583341655648-78bdf4ed6d13",
-      "https://images.unsplash.com/photo-1531346878377-a5be20888e57",
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+      "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3",
+      "https://images.unsplash.com/photo-1579017308347-e53e0d2fc5e9",
     ],
     stock: 86,
     reviewCount: 158,
@@ -429,9 +421,8 @@ export const catalog = [
     description:
       "A solid brass fountain pen with a medium iridium-tipped nib. Threaded cap, converter for bottled ink, two midnight-blue cartridges in the box. Heavy in the hand in a way that slows your writing down.",
     images: [
-      "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3",
-      "https://images.unsplash.com/photo-1473186505569-9c61870c11f9",
-      "https://images.unsplash.com/photo-1509824189536-24ab5d1ecb00",
+      "https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd",
+      "https://images.unsplash.com/photo-1501618669935-18b6ecb13d6d",
     ],
     stock: 42,
     reviewCount: 22,
@@ -446,8 +437,8 @@ export const catalog = [
     description:
       "A simple analog system: 150 thick cotton-stock index cards in four colors, plus a walnut deck holder for your desk. Use it however you want. Most people end up running a daily three-card pull.",
     images: [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363",
-      "https://images.unsplash.com/photo-1569578943539-5f83c3e92e2f",
+      "https://images.unsplash.com/photo-1483546416237-76fd26bbcdd1",
+      "https://images.unsplash.com/photo-1462642109801-4ac2971a3a51",
     ],
     stock: 120,
     reviewCount: 0,
@@ -462,8 +453,8 @@ export const catalog = [
     description:
       "A 6 by 9 inch notepad printed by letterpress on 120 gsm uncoated stock. Kraft board cover, perforated sheets for clean tear-out, wire-binding that lies flat. Designed to look like something worth keeping.",
     images: [
-      "https://images.unsplash.com/photo-1586281380349-632531db7ed4",
-      "https://images.unsplash.com/photo-1531346878377-a5be20888e57",
+      "https://images.unsplash.com/photo-1591195852468-03a01d1375d6",
+      "https://images.unsplash.com/photo-1483546363825-7ebf25fb7513",
     ],
     stock: 94,
     reviewCount: 33,
@@ -478,8 +469,8 @@ export const catalog = [
     description:
       "A pair of scissors forged in Japan: stainless steel blades precision-ground to a micro-bevel, solid brass handle scales. The brass will develop a warm patina with use. Opens with one hand via a spring-loaded loop.",
     images: [
-      "https://images.unsplash.com/photo-1583864697784-a0efc8379f70",
-      "https://images.unsplash.com/photo-1561861422-a549073e547a",
+      "https://images.unsplash.com/photo-1587135991058-8816b028691f",
+      "https://images.unsplash.com/photo-1550592704-6c76defa9985",
     ],
     stock: 37,
     reviewCount: 14,
@@ -494,8 +485,8 @@ export const catalog = [
     description:
       "A complete wax seal kit: a custom-etched brass stamp with a 'A' monogram, three natural wax sticks in ivory, forest green, and charcoal, plus a long-handled brass melting spoon. Comes in a cloth-wrapped box.",
     images: [
-      "https://images.unsplash.com/photo-1616161560417-2b3dd9d4ae4a",
-      "https://images.unsplash.com/photo-1578020190125-f4f7c18bc9cb",
+      "https://images.unsplash.com/photo-1623697899811-f2403f50685e",
+      "https://images.unsplash.com/photo-1598620617148-c9e8ddee6711",
     ],
     stock: 52,
     reviewCount: 21,
@@ -510,8 +501,8 @@ export const catalog = [
     description:
       "A hand-blown glass pen cup with a slightly irregular silhouette — each one is different. Holds 8 to 10 pens upright. The weighted base keeps it from tipping with a full load. Dishwasher safe.",
     images: [
-      "https://images.unsplash.com/photo-1586281380426-83e9cfe0c5f0",
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
+      "https://images.unsplash.com/photo-1601321268954-22646044f7d0",
+      "https://images.unsplash.com/photo-1516414447565-b14be0adf13e",
     ],
     stock: 61,
     reviewCount: 18,
@@ -528,8 +519,8 @@ export const catalog = [
     description:
       "A 36-by-17-inch desk pad in full-grain Italian leather, backed with wool felt to keep it from sliding. Develops a patina around your mouse and keyboard within a few months — which is the look.",
     images: [
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
-      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
+      "https://images.unsplash.com/photo-1646768878729-ac69ab1cdb42",
+      "https://images.unsplash.com/photo-1537301496981-ceee9e41384a",
     ],
     stock: 38,
     reviewCount: 64,
@@ -544,8 +535,8 @@ export const catalog = [
     description:
       "A keyboard wrist rest and matching mouse palm rest in Belgian linen over a memory-foam core. Subtle taper from front to back. Removable washable covers.",
     images: [
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
-      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef",
+      "https://images.unsplash.com/photo-1760348213270-7cd00b8c3405",
+      "https://images.unsplash.com/photo-1653191722556-abd24773bba8",
     ],
     stock: 74,
     reviewCount: 11,
@@ -560,8 +551,8 @@ export const catalog = [
     description:
       "A full-motion monitor arm that holds up to 32 inches and 17 lbs. Single-arm with a parallelogram linkage so you can push the monitor back and pull it forward without losing height. Internal cable routing.",
     images: [
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1707167144717-683f1714939b",
+      "https://images.unsplash.com/photo-1630951633296-dcc73fab12ca",
     ],
     stock: 55,
     reviewCount: 147,
@@ -576,8 +567,8 @@ export const catalog = [
     description:
       "A laptop stand in solid walnut with brass barrel adjusters for two angles: 15° for typing and 25° for viewing. The open arch underneath ventilates the bottom of your machine and leaves room for a keyboard.",
     images: [
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89",
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
+      "https://images.unsplash.com/photo-1671063125680-a2ebbebfbae5",
+      "https://images.unsplash.com/photo-1630209351449-14f60b0e4103",
     ],
     stock: 48,
     reviewCount: 88,
@@ -592,8 +583,8 @@ export const catalog = [
     description:
       "A 32-by-20-inch standing mat with a 3/4-inch ergonomic foam core and beveled edges so you don't trip. Natural rubber base grips hard floors and tile without a pad underneath. Spot-clean top surface.",
     images: [
-      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+      "https://images.unsplash.com/photo-1727464996084-3cc1ec8e04ea",
+      "https://images.unsplash.com/photo-1755309448312-8776b3d098f0",
     ],
     stock: 29,
     reviewCount: 76,
@@ -608,8 +599,8 @@ export const catalog = [
     description:
       "An ergonomic footrest that rocks ±30 degrees to keep your legs active while seated. Non-slip surface, rubberized base, adjustable height from 4 to 6 inches. Reduces ankle and calf fatigue on long calls.",
     images: [
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd",
-      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
+      "https://images.unsplash.com/photo-1590408867096-a6f7a9de19c0",
+      "https://images.unsplash.com/photo-1750975314977-374f2290db53",
     ],
     stock: 63,
     reviewCount: 32,
@@ -626,9 +617,8 @@ export const catalog = [
     description:
       "A solid brass arc lamp with a marble counterweight base. Tunable from a warm 2700 K reading light to a clean 6500 K work light. Touch-dim along the base — no buttons, no remote, no app.",
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
-      "https://images.unsplash.com/photo-1621177555452-bedbe4c28879",
-      "https://images.unsplash.com/photo-1551380701-5dd33d5b5d06",
+      "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85",
+      "https://images.unsplash.com/photo-1621177555630-b861919c864f",
     ],
     stock: 27,
     reviewCount: 102,
@@ -643,8 +633,8 @@ export const catalog = [
     description:
       "A pendant light with a hand-blown opal glass shade. Throws an even, glare-free wash over a 5-foot work surface. Linen-wrapped braided cord, brass canopy.",
     images: [
-      "https://images.unsplash.com/photo-1526040652367-ac003a0475fe",
-      "https://images.unsplash.com/photo-1582356630861-61bb9b41f541",
+      "https://images.unsplash.com/photo-1621177555452-bedbe4c28879",
+      "https://images.unsplash.com/photo-1570974802254-4b0ad1a755f5",
     ],
     stock: 14,
     reviewCount: 5,
@@ -659,8 +649,8 @@ export const catalog = [
     description:
       "A floor lamp that shifts color temperature with your day — cool white at noon, warm amber after sunset. Matter-over-Thread, so it pairs cleanly with HomeKit, Alexa, and Google Home. Walnut base.",
     images: [
-      "https://images.unsplash.com/photo-1517059224940-d4af9eec41b7",
-      "https://images.unsplash.com/photo-1570974802254-4b0ad1a755f5",
+      "https://images.unsplash.com/photo-1579326882518-21eaa7893b02",
+      "https://images.unsplash.com/photo-1601642964568-1917224f4e4d",
     ],
     stock: 11,
     reviewCount: 38,
@@ -675,8 +665,8 @@ export const catalog = [
     description:
       "A USB-powered monitor light bar that hangs on the top bezel without clamps or adhesive. Asymmetric optic throws light only downward onto your desk — zero reflection back into the camera or your eyes. Touch wheel for brightness and temperature.",
     images: [
-      "https://images.unsplash.com/photo-1593640495253-23196b27a87f",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1526040652367-ac003a0475fe",
+      "https://images.unsplash.com/photo-1585597647877-6eaa01bf9a05",
     ],
     stock: 72,
     reviewCount: 203,
@@ -691,8 +681,8 @@ export const catalog = [
     description:
       "A bedside alarm clock that simulates a 30-minute sunrise before the actual alarm time. Starts at deep orange and eases to full daylight. Built-in FM radio and three natural wake sounds. Ceramic-effect base.",
     images: [
-      "https://images.unsplash.com/photo-1617363020293-62faac14783d",
-      "https://images.unsplash.com/photo-1530811761207-8d9d22f0a141",
+      "https://images.unsplash.com/photo-1543512214-4f76e81f8bfc",
+      "https://images.unsplash.com/photo-1614743559948-d158e36ecb4f",
     ],
     stock: 36,
     reviewCount: 54,
@@ -707,8 +697,8 @@ export const catalog = [
     description:
       "A swing-arm wall sconce in brushed brass with a hand-thrown ceramic shade. Available hardwired or with a cloth-wrapped plug-in cord. Arm extends 18 inches and pivots full 180 degrees.",
     images: [
-      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89",
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
+      "https://images.unsplash.com/photo-1652198050957-fd1c6aab021f",
+      "https://images.unsplash.com/photo-1619608135352-868e8313e121",
     ],
     stock: 18,
     reviewCount: 27,
@@ -725,9 +715,8 @@ export const catalog = [
     description:
       "A hand-thrown ceramic diffuser with three of our signature oils: Cedar & Vetiver, Fig Leaf, and Sea Salt. Eight-hour run time on a quiet ultrasonic mister. Auto-shutoff when dry.",
     images: [
-      "https://images.unsplash.com/photo-1612293905607-b003de9e54fb",
-      "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7",
-      "https://images.unsplash.com/photo-1570823635306-250abb06d4b3",
+      "https://images.unsplash.com/photo-1650108047753-460767fc9ebd",
+      "https://images.unsplash.com/photo-1769653907239-c8f1a1843b08",
     ],
     stock: 53,
     reviewCount: 89,
@@ -742,9 +731,8 @@ export const catalog = [
     description:
       "A poured coconut-soy candle in a refillable matte stoneware vessel. Top notes of cedar and vetiver, a base of moss. Burns evenly for about 60 hours. Cotton wick, no fragrance fillers.",
     images: [
-      "https://images.unsplash.com/photo-1604249180474-3ebaf8747373",
-      "https://images.unsplash.com/photo-1603905179139-db12ab535ca9",
-      "https://images.unsplash.com/photo-1619799360851-a143fbc240b3",
+      "https://images.unsplash.com/photo-1771817778067-1dd38dfa56dd",
+      "https://images.unsplash.com/photo-1777882201052-a746eb59264d",
     ],
     stock: 96,
     reviewCount: 56,
@@ -759,9 +747,8 @@ export const catalog = [
     description:
       "A 12-inch brushed brass clock with the numerals slightly tilted — a quiet rebellion against perfect symmetry. Silent sweep quartz movement, single AA battery, no ticking.",
     images: [
-      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c",
-      "https://images.unsplash.com/photo-1564091880021-bb02f2b2928d",
-      "https://images.unsplash.com/photo-1606674556490-c2bbb4ee05e5",
+      "https://images.unsplash.com/photo-1596420547408-0f11aaeff6ba",
+      "https://images.unsplash.com/photo-1777738982318-73c3c3fba29c",
     ],
     stock: 22,
     reviewCount: 14,
@@ -776,8 +763,8 @@ export const catalog = [
     description:
       "Two live golden pothos in 6-inch hand-thrown terracotta planters with leather hanging straps. Ships from a Pennsylvania nursery in temperature-controlled packaging. Beginner-friendly: tolerates a missed week.",
     images: [
-      "https://images.unsplash.com/photo-1521649415036-659258dc424f",
-      "https://images.unsplash.com/photo-1556559322-b5071efadc88",
+      "https://images.unsplash.com/photo-1772795810264-2b46ab4622ea",
+      "https://images.unsplash.com/photo-1611651625032-153048f0da00",
     ],
     stock: 0,
     reviewCount: 7,
@@ -792,9 +779,8 @@ export const catalog = [
     description:
       "A 14 oz mug thrown on a wheel in Asheville. Reactive glaze means yours will have its own pattern. Wide handle, balanced lip. Microwave and dishwasher safe.",
     images: [
-      "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d",
-      "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
-      "https://images.unsplash.com/photo-1585664811087-47f65abbad64",
+      "https://images.unsplash.com/photo-1766038843994-e17d3a7357ac",
+      "https://images.unsplash.com/photo-1743186496240-b6cd07a9cdae",
     ],
     stock: 68,
     reviewCount: 32,
@@ -809,8 +795,8 @@ export const catalog = [
     description:
       "Three small succulents — echeveria, haworthia, and aloe — in 3-inch terracotta pots. Ships rooted and healthy. Water once every two to three weeks. Fits in the corner of any desk without demanding attention.",
     images: [
-      "https://images.unsplash.com/photo-1485955900006-10f4d324d411",
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
+      "https://images.unsplash.com/photo-1773995419788-451aec4bfdef",
+      "https://images.unsplash.com/photo-1761375211973-86625f5c5cba",
     ],
     stock: 24,
     reviewCount: 41,
@@ -825,8 +811,8 @@ export const catalog = [
     description:
       "A 24-by-16-inch desk blotter in 100% merino wool felt — 5mm thick. It protects the desk surface, softens ambient sound, and gives you a consistent surface for writing. Available in natural, charcoal, and sage.",
     images: [
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
-      "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a",
+      "https://images.unsplash.com/photo-1687848666831-ceeabe541295",
+      "https://images.unsplash.com/photo-1766241694661-b9fade569f91",
     ],
     stock: 33,
     reviewCount: 17,
@@ -841,8 +827,8 @@ export const catalog = [
     description:
       "A pair of 10-inch hand-dipped beeswax tapers. Pure beeswax burns longer and cleaner than paraffin, with a subtle natural honey and vanilla note. Fit standard 7/8-inch candle holders.",
     images: [
-      "https://images.unsplash.com/photo-1574100680328-f8a0d4d1c73c",
-      "https://images.unsplash.com/photo-1601049676869-702ea24cfd58",
+      "https://images.unsplash.com/photo-1777451440783-7da36ec76377",
+      "https://images.unsplash.com/photo-1650108047753-460767fc9ebd",
     ],
     stock: 83,
     reviewCount: 23,
@@ -857,8 +843,8 @@ export const catalog = [
     description:
       "An 11-by-14-inch botanical print created from 19th-century scientific illustration plates, reprinted by letterpress on 300 gsm cotton stock. Comes framed in solid ash with a natural linen mat.",
     images: [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d",
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
+      "https://images.unsplash.com/photo-1769653907239-c8f1a1843b08",
+      "https://images.unsplash.com/photo-1771817778067-1dd38dfa56dd",
     ],
     stock: 15,
     reviewCount: 8,
@@ -875,8 +861,8 @@ export const catalog = [
     description:
       "A 36-inch solid white oak shelf on a concealed steel bracket. Holds 40 lbs without sagging. Comes with all hardware, plus a level. Cleanly cut, hand-sanded, finished in a satin matte oil.",
     images: [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace",
-      "https://images.unsplash.com/photo-1588854337236-6889d631faa8",
+      "https://images.unsplash.com/photo-1600422086908-72be2c8f5f3f",
+      "https://images.unsplash.com/photo-1603533880965-e1302f35290b",
     ],
     stock: 19,
     reviewCount: 12,
@@ -891,8 +877,8 @@ export const catalog = [
     description:
       "A stacking document tray built from full-grain leather over walnut hardwood. Stack up to four without wobble. Holds letter and A4 with room to grab a sheet without lifting the stack.",
     images: [
-      "https://images.unsplash.com/photo-1586281380426-83e9cfe0c5f0",
-      "https://images.unsplash.com/photo-1568013519834-7bd7f32e4f5c",
+      "https://images.unsplash.com/photo-1521459382675-a3f2f35a6b9a",
+      "https://images.unsplash.com/photo-1765371513189-44702dcee4be",
     ],
     stock: 47,
     reviewCount: 4,
@@ -907,8 +893,8 @@ export const catalog = [
     description:
       "A two-drawer desktop unit in walnut veneer with soft-close slides. Rated to support a monitor on top. Sits flush under most monitor stands. Upper drawer is felt-lined for pens and small items.",
     images: [
-      "https://images.unsplash.com/photo-1568013519834-7bd7f32e4f5c",
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "https://images.unsplash.com/photo-1721521918228-90eeed46f52d",
+      "https://images.unsplash.com/photo-1649954174454-767fd0a40fb6",
     ],
     stock: 11,
     reviewCount: 22,
@@ -923,8 +909,8 @@ export const catalog = [
     description:
       "A 24-by-18-inch powder-coated steel pegboard with 12 accessories: shelves, pen rails, a cable drop, a small shelf, and hooks. Mounts with two wall anchors. Accessories click in and rearrange without tools.",
     images: [
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
-      "https://images.unsplash.com/photo-1588854337236-6889d631faa8",
+      "https://images.unsplash.com/photo-1528027656671-6d156f4f1f48",
+      "https://images.unsplash.com/photo-1668893973066-95b14ce86e71",
     ],
     stock: 27,
     reviewCount: 36,
@@ -939,8 +925,8 @@ export const catalog = [
     description:
       "A desk-sized box in walnut-stained MDF with a removable linen-covered lid. Fits a standard six-outlet power strip and swallows the cord chaos underneath. Cable exit slots on both ends.",
     images: [
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
+      "https://images.unsplash.com/photo-1718133459670-24c55af0fae6",
+      "https://images.unsplash.com/photo-1605484583258-221ca6812773",
     ],
     stock: 68,
     reviewCount: 49,
@@ -955,8 +941,8 @@ export const catalog = [
     description:
       "Five expandable bamboo dividers that fit drawers from 15 to 22 inches wide. Creates sections for pens, scissors, sticky notes, and anything else that ends up loose in a drawer. No adhesive, no tools.",
     images: [
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
-      "https://images.unsplash.com/photo-1568013519834-7bd7f32e4f5c",
+      "https://images.unsplash.com/photo-1748681257876-44e2aa2070b4",
+      "https://images.unsplash.com/photo-1701795685126-1a047a9a03d9",
     ],
     stock: 92,
     reviewCount: 28,
@@ -971,8 +957,8 @@ export const catalog = [
     description:
       "A 13-pocket expanding file in linen-covered hardboard. Each pocket is labeled with a handwritten-style tab — months, or your own labeling. Sits on the desk without tipping. Holds letter and A4.",
     images: [
-      "https://images.unsplash.com/photo-1586281380426-83e9cfe0c5f0",
-      "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e",
+      "https://images.unsplash.com/photo-1776482128061-0367ecc2028c",
+      "https://images.unsplash.com/photo-1720007292383-c8516d467bd0",
     ],
     stock: 44,
     reviewCount: 15,
@@ -989,8 +975,8 @@ export const catalog = [
     description:
       "A memory-foam wedge that tilts your pelvis forward by about seven degrees, taking the slouch out of long sits. Removable washable linen cover. Works on most office chairs.",
     images: [
-      "https://images.unsplash.com/photo-1578116922645-3976907a7671",
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597",
+      "https://images.unsplash.com/photo-1591291621164-2c6367723315",
+      "https://images.unsplash.com/photo-1591291621060-89264efbeaed",
     ],
     stock: 41,
     reviewCount: 26,
@@ -1005,8 +991,8 @@ export const catalog = [
     description:
       "Non-prescription glasses with a clear lens that filters 40% of the blue light spectrum associated with eye fatigue. Spring-hinge temples, lightweight acetate frame. Wear them from 9 AM to close-of-business.",
     images: [
-      "https://images.unsplash.com/photo-1574258495973-f010dfbb5371",
-      "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+      "https://images.unsplash.com/photo-1661307897681-f2bec8f8383e",
+      "https://images.unsplash.com/photo-1646376248949-9db1b3b7bce4",
     ],
     stock: 78,
     reviewCount: 112,
@@ -1021,8 +1007,8 @@ export const catalog = [
     description:
       "A compact pedal unit that slides under any desk. Magnetic resistance is silent — you can pedal through a call without anyone noticing. LCD shows time, distance, and calories. Eight resistance levels.",
     images: [
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
-      "https://images.unsplash.com/photo-1620188526357-9c126ee49d2b",
+      "https://images.unsplash.com/photo-1585076795621-7431cc05b271",
+      "https://images.unsplash.com/photo-1541757089-5ac641ab48cd",
     ],
     stock: 33,
     reviewCount: 55,
@@ -1037,8 +1023,8 @@ export const catalog = [
     description:
       "A yoga mat with a natural cork surface over a natural rubber base. Cork is naturally antimicrobial and gets grippier as it gets wet — unlike foam mats. 72 by 24 inches, 5mm thick, carries in a bag included.",
     images: [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+      "https://images.unsplash.com/photo-1653617748437-895c016e88b1",
+      "https://images.unsplash.com/photo-1763004871583-4183d64096b1",
     ],
     stock: 26,
     reviewCount: 38,
@@ -1053,8 +1039,8 @@ export const catalog = [
     description:
       "A standing mat with acupressure spikes across the surface to stimulate circulation in the feet and calves during long standing-desk sessions. Use barefoot for 10 to 20 minutes. Natural linen case included.",
     images: [
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597",
-      "https://images.unsplash.com/photo-1590416606655-07e0e5de8e9a",
+      "https://images.unsplash.com/photo-1599447291786-724cfd131568",
+      "https://images.unsplash.com/photo-1611682011252-21667a85e3ac",
     ],
     stock: 57,
     reviewCount: 19,
@@ -1071,8 +1057,8 @@ export const catalog = [
     description:
       "Three microfiber cloths in graded weaves plus a 250 ml bottle of alcohol-free screen solution that is safe for anti-glare and matte coatings. Ships in a refillable glass bottle.",
     images: [
-      "https://images.unsplash.com/photo-1618329027054-0d4cf29d97e6",
-      "https://images.unsplash.com/photo-1588693363434-03462c39e4c1",
+      "https://images.unsplash.com/photo-1627905646269-7f034dcc5738",
+      "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50",
     ],
     stock: 130,
     reviewCount: 2,
@@ -1087,8 +1073,8 @@ export const catalog = [
     description:
       "Everything you need to clean a mechanical keyboard: a wire keycap puller, three detail brushes in different stiffnesses, a tub of cleaning putty for between keys, and a lint-free microfiber cloth.",
     images: [
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
-      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef",
+      "https://images.unsplash.com/photo-1594159855327-c8c0842a2132",
+      "https://images.unsplash.com/photo-1697463624716-cd2f0423d9d9",
     ],
     stock: 85,
     reviewCount: 14,
@@ -1103,8 +1089,8 @@ export const catalog = [
     description:
       "A three-piece leather care kit: a natural saddle soap bar, a beeswax conditioner, and a horsehair buffing brush. Use quarterly on your desk pad, chair, and journal cover. Travel-size so it fits in a drawer.",
     images: [
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd",
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
+      "https://images.unsplash.com/photo-1698349145149-f1e4126f2531",
+      "https://images.unsplash.com/photo-1601160458000-2b11f9fa1a0e",
     ],
     stock: 62,
     reviewCount: 7,
@@ -1119,8 +1105,8 @@ export const catalog = [
     description:
       "An electric air duster that replaces canned air. 6000 RPM brushless motor, USB-C rechargeable. Two nozzle attachments. No propellant, no cold burn, no running out mid-clean.",
     images: [
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
-      "https://images.unsplash.com/photo-1583864697784-a0efc8379f70",
+      "https://images.unsplash.com/photo-1771918050103-57b5de00d960",
+      "https://images.unsplash.com/photo-1762341116319-05a8355fcfc9",
     ],
     stock: 43,
     reviewCount: 31,
@@ -1136,8 +1122,8 @@ export const catalog = [
     preview: "Solid knotty pine. 60×30\". Raw oil finish.",
     description: "A simple Parsons-style writing desk in solid knotty pine, finished with a penetrating raw oil that lets the grain read clearly. Four-inch-thick legs, routed apron, a 60-by-30-inch surface. Nothing extra.",
     images: [
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
-      "https://images.unsplash.com/photo-1497366412874-3415097a27e7",
+      "https://images.unsplash.com/photo-1625655164397-08d7b11ab280",
+      "https://images.unsplash.com/photo-1625655164422-a954607ebca4",
     ],
     stock: 16,
     reviewCount: 11,
@@ -1151,8 +1137,8 @@ export const catalog = [
     preview: "Hard maple top, 0–50° tilt. Parallel rule included.",
     description: "A full-size drafting table in hard maple with an angle-adjustable top from flat to 50 degrees. Counterbalanced tilt mechanism, pencil ledge, a parallel rule and clamp. Height adjusts from 29 to 37 inches.",
     images: [
-      "https://images.unsplash.com/photo-1593642634524-b40b5baae6bb",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
+      "https://images.unsplash.com/photo-1575318633968-0383e7d07ca0",
     ],
     stock: 6,
     reviewCount: 8,
@@ -1166,8 +1152,8 @@ export const catalog = [
     preview: "Solid-oak top, welded raw steel trestle base.",
     description: "A 72-by-30-inch white oak slab laid on a hand-welded raw steel trestle. The steel is left unsealed — it develops its own patina. Cross-bar stretcher for rigidity and a footrest in one.",
     images: [
-      "https://images.unsplash.com/photo-1629798825999-9a2b43bef9ac",
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89",
+      "https://images.unsplash.com/photo-1597072689227-8882273e8f6a",
+      "https://images.unsplash.com/photo-1493934558415-9d19f0b2b4d2",
     ],
     stock: 4,
     reviewCount: 14,
@@ -1181,8 +1167,8 @@ export const catalog = [
     preview: "Ash top, powder-coated sawhorse legs. Flat-pack ships in two boxes.",
     description: "A writing desk built on paired sawhorse legs — powder-coated charcoal steel — under a solid ash top finished in a light oil. The legs fold flat for moving. Ships in two flat-pack boxes, assembles in 20 minutes.",
     images: [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f",
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7",
+      "https://images.unsplash.com/photo-1704655295066-681e61ecca6b",
     ],
     stock: 9,
     reviewCount: 5,
@@ -1196,8 +1182,8 @@ export const catalog = [
     preview: "Tambour roll-top. 12 cubbies. Solid quarter-sawn oak.",
     description: "A roll-top secretary desk in quarter-sawn white oak with a slatted tambour lid that rolls shut to hide everything in under two seconds. Twelve interior cubbies, two pull-out surfaces, three drawers on the right pedestal.",
     images: [
-      "https://images.unsplash.com/photo-1568013519834-7bd7f32e4f5c",
-      "https://images.unsplash.com/photo-1588854337236-6889d631faa8",
+      "https://images.unsplash.com/photo-1563253746-350a0a877afa",
+      "https://images.unsplash.com/photo-1594580701468-e5678582b8ce",
     ],
     stock: 3,
     reviewCount: 22,
@@ -1211,8 +1197,8 @@ export const catalog = [
     preview: "Hand-crank pneumatic. Adjusts 28–46\" in 8 sec.",
     description: "A pneumatic sit-stand table that converts from seated to standing height in eight seconds with a single hand-crank. 54-by-27-inch birch-ply top, powder-coated steel legs, no motor or electricity required.",
     images: [
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
-      "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a",
+      "https://images.unsplash.com/photo-1605436247078-f0ef43ee8d5c",
+      "https://images.unsplash.com/photo-1595351475754-8a520e0bc3a3",
     ],
     stock: 12,
     reviewCount: 19,
@@ -1226,8 +1212,8 @@ export const catalog = [
     preview: "12mm tempered smoked glass. Chrome legs. 71×35\".",
     description: "A 71-by-35-inch executive desk in 12mm tempered smoked glass on polished chrome legs with floor-leveling feet. The cable grommet is glass too — no plastic anywhere. Wipes clean in 30 seconds.",
     images: [
-      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
+      "https://images.unsplash.com/photo-1625107399301-a78ae8d2a1fe",
+      "https://images.unsplash.com/photo-1677100091644-53575a136cfb",
     ],
     stock: 7,
     reviewCount: 31,
@@ -1241,8 +1227,8 @@ export const catalog = [
     preview: "Two-piece credenza + 48\" return. Four drawers.",
     description: "A credenza-and-return set in American walnut veneer over a hardwood carcass. The 66-inch credenza has two sliding doors hiding two adjustable shelves; the 48-inch return connects at 90 degrees on either side.",
     images: [
-      "https://images.unsplash.com/photo-1629798825999-9a2b43bef9ac",
-      "https://images.unsplash.com/photo-1568013519834-7bd7f32e4f5c",
+      "https://images.unsplash.com/photo-1677100091694-a09a1e468a7b",
+      "https://images.unsplash.com/photo-1625655164397-08d7b11ab280",
     ],
     stock: 5,
     reviewCount: 9,
@@ -1256,8 +1242,8 @@ export const catalog = [
     preview: "Folds flat. Whiteboard surface top. 40×20\".",
     description: "A fold-down wall desk with a whiteboard-coated top surface. Write directly on the desk, wipe it clean. Closes to 4 inches off the wall. Steel mounting plate rated for 80 lbs.",
     images: [
-      "https://images.unsplash.com/photo-1600494448853-ca7b5b7e1f49",
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
+      "https://images.unsplash.com/photo-1625655164422-a954607ebca4",
+      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
     ],
     stock: 22,
     reviewCount: 7,
@@ -1273,8 +1259,8 @@ export const catalog = [
     preview: "360° tilt. Adjusts 23–33\". Engages core passively.",
     description: "A balance stool with a rounded base that tilts in all directions, keeping your core slightly engaged without effort. Height adjusts from 23 to 33 inches via gas lift. Faux-leather saddle seat, chrome base.",
     images: [
-      "https://images.unsplash.com/photo-1580480055273-228ff5388ef8",
-      "https://images.unsplash.com/photo-1519455953755-af066f52f1a6",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
+      "https://images.unsplash.com/photo-1572521165329-b197f9ea3da6",
     ],
     stock: 28,
     reviewCount: 34,
@@ -1288,8 +1274,8 @@ export const catalog = [
     preview: "Breathable mesh. Adjustable height + armrests. No levers visible.",
     description: "A task chair designed to hide all its adjustments inside the seat pan. Height, armrest width, and lumbar tension all adjust from underneath so the silhouette stays clean. Breathable black mesh, aluminum base.",
     images: [
-      "https://images.unsplash.com/photo-1688578735427-994ecdea3ea4",
-      "https://images.unsplash.com/photo-1594235048794-fae8583a5af5",
+      "https://images.unsplash.com/photo-1666005368598-2164c0e486c8",
+      "https://images.unsplash.com/photo-1616144046096-4eb12ab5ea7b",
     ],
     stock: 19,
     reviewCount: 57,
@@ -1303,8 +1289,8 @@ export const catalog = [
     preview: "Boucle wool. Swivel base. Wide arms for a laptop.",
     description: "A barrel-shaped reading chair in natural boucle wool with arms wide enough to rest a laptop. 360-degree swivel base in powder-coated steel. The seat depth is 22 inches — deep enough to sit cross-legged.",
     images: [
-      "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+      "https://images.unsplash.com/photo-1616144049673-799a1a9c2f10",
+      "https://images.unsplash.com/photo-1639690404055-29bd387a7542",
     ],
     stock: 11,
     reviewCount: 28,
@@ -1318,8 +1304,8 @@ export const catalog = [
     preview: "Solid walnut frame. Canvas seat + back. Folds flat.",
     description: "A director's chair in solid walnut with natural canvas seat and back. Folds flat for storage or transport. The canvas panels lace off and are washable. Holds 250 lbs.",
     images: [
-      "https://images.unsplash.com/photo-1604671801908-6f0c6a092c05",
-      "https://images.unsplash.com/photo-1505797149-43b0069ec26b",
+      "https://images.unsplash.com/photo-1758607010203-d6b7f6ec9262",
+      "https://images.unsplash.com/photo-1776548759492-3355a285f68f",
     ],
     stock: 14,
     reviewCount: 16,
@@ -1333,8 +1319,8 @@ export const catalog = [
     preview: "Forest green velvet. Low-profile back. Brass base.",
     description: "A low-back office chair in deep forest green velvet on a five-star brass base. The seat height adjusts from 18 to 22 inches. No headrest — keeps the silhouette clean. Velvet is stain-treated.",
     images: [
-      "https://images.unsplash.com/photo-1572521165329-b197f9ea3da6",
-      "https://images.unsplash.com/photo-1666005368598-2164c0e486c8",
+      "https://images.unsplash.com/photo-1776548759455-310ef8cd49ec",
+      "https://images.unsplash.com/photo-1776548759598-aa916464ed1f",
     ],
     stock: 8,
     reviewCount: 41,
@@ -1348,8 +1334,8 @@ export const catalog = [
     preview: "Handwoven rattan. 330 lb rating. Cushion included.",
     description: "A full-size hanging egg chair in handwoven rattan with a powder-coated steel inner frame. The ceiling hook and mounting hardware are included. Comes with a tufted linen cushion insert. Rated for 330 lbs.",
     images: [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-      "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea",
+      "https://images.unsplash.com/photo-1776548759593-6fa64c60129f",
+      "https://images.unsplash.com/photo-1776548759644-5da0988a7874",
     ],
     stock: 6,
     reviewCount: 19,
@@ -1363,8 +1349,8 @@ export const catalog = [
     preview: "Forward-tilt seat. 24–33\" height. Angled footrest.",
     description: "A perch-height task stool with a forward-angled seat that opens the hip angle for better spinal alignment during standing-desk work. Steel footring at two heights, height-adjustable from 24 to 33 inches.",
     images: [
-      "https://images.unsplash.com/photo-1519455953755-af066f52f1a6",
-      "https://images.unsplash.com/photo-1580480055273-228ff5388ef8",
+      "https://images.unsplash.com/photo-1776548759448-499e26792d83",
+      "https://images.unsplash.com/photo-1762423992203-552b7c671b92",
     ],
     stock: 24,
     reviewCount: 13,
@@ -1378,8 +1364,8 @@ export const catalog = [
     preview: "Tubular steel frame. Upholstered seat + back. No back legs.",
     description: "A cantilever chair in polished tubular steel with an upholstered seat and back in natural bouclé. The frameless back leg design gives a slight forward spring that works well at a desk.",
     images: [
-      "https://images.unsplash.com/photo-1646154034833-d10291080448",
-      "https://images.unsplash.com/photo-1572521165329-b197f9ea3da6",
+      "https://images.unsplash.com/photo-1765765419166-3bf1af848951",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91",
     ],
     stock: 17,
     reviewCount: 22,
@@ -1393,8 +1379,8 @@ export const catalog = [
     preview: "27×27\". Cotton fill. Removable linen cover.",
     description: "A traditional zabuton floor cushion at 27 by 27 inches with a thick cotton fill and a removable linen cover. Use it under a zafu or on its own for seated work on the floor. Machine-washable cover.",
     images: [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+      "https://images.unsplash.com/photo-1572521165329-b197f9ea3da6",
+      "https://images.unsplash.com/photo-1666005368598-2164c0e486c8",
     ],
     stock: 35,
     reviewCount: 9,
@@ -1410,8 +1396,8 @@ export const catalog = [
     preview: "3840×2160. 99% sRGB. USB-C 65W. Factory-calibrated.",
     description: "A 27-inch 4K IPS monitor factory-calibrated to Delta E under 2. 99% sRGB, 400 nit peak brightness, USB-C input at 65W charge pass-through. Frameless three-side design, height-adjustable stand included.",
     images: [
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf",
-      "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+      "https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6",
+      "https://images.unsplash.com/photo-1541140532154-b024d705b90a",
     ],
     stock: 17,
     reviewCount: 64,
@@ -1425,8 +1411,8 @@ export const catalog = [
     preview: "8192 pressure levels. 8×5\" active area. Tilt detection.",
     description: "A compact drawing tablet with an 8-by-5-inch active area, 8192 pressure levels, and ±60° tilt detection. The textured surface mimics paper. USB-C cable and a wireless adapter both included.",
     images: [
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89",
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
+      "https://images.unsplash.com/photo-1587831990711-23ca6441447b",
+      "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae",
     ],
     stock: 29,
     reviewCount: 38,
@@ -1440,8 +1426,8 @@ export const catalog = [
     preview: "Bluetooth 5.0. 21 keys. Rechargeable. Mac and Windows.",
     description: "A Bluetooth 5.0 numpad in CNC-milled aluminum. Pairs with up to three devices. Backlit keys, rechargeable via USB-C, silent low-profile switches. Matches most modern laptops in finish.",
     images: [
-      "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae",
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+      "https://images.unsplash.com/photo-1551515300-2d3b7bb80920",
+      "https://images.unsplash.com/photo-1585314614250-d213876625e1",
     ],
     stock: 43,
     reviewCount: 26,
@@ -1455,8 +1441,8 @@ export const catalog = [
     preview: "4K HDMI, 3× USB-A, SD, microSD, 100W PD.",
     description: "A 7-port USB-C hub in aluminum with 4K@30Hz HDMI, three USB-A 3.0 ports, SD and microSD card slots, and 100W power delivery pass-through. 6-inch tether cable. No drivers.",
     images: [
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
+      "https://images.unsplash.com/photo-1707592691247-5c3a1c7ba0e3",
+      "https://images.unsplash.com/photo-1561112078-7d24e04c3407",
     ],
     stock: 67,
     reviewCount: 72,
@@ -1470,8 +1456,8 @@ export const catalog = [
     preview: "6 outlets, 2 USB-C, 2 USB-A. App control per outlet.",
     description: "A power strip where each of the six outlets is individually controllable via app or voice assistant. Two USB-C ports at 30W each, two USB-A at 12W. Energy monitoring, surge protection. Aluminum housing.",
     images: [
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+      "https://images.unsplash.com/photo-1491947153227-33d59da6c448",
+      "https://images.unsplash.com/photo-1626958390916-90be78b9bfe6",
     ],
     stock: 38,
     reviewCount: 47,
@@ -1485,8 +1471,8 @@ export const catalog = [
     preview: "100% merino. Fits 13–16\". Water-repellent outer.",
     description: "A laptop sleeve in 100% merino wool with a water-repellent natural-lanolin outer coat and a suede interior. Fits laptops from 13 to 16 inches. One front zip pocket for cables and adapters.",
     images: [
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
-      "https://images.unsplash.com/photo-1593642532559-2b1e33a14a7e",
+      "https://images.unsplash.com/photo-1616248304589-6a3d8d60ad7d",
+      "https://images.unsplash.com/photo-1584727151652-d09b17ebf23f",
     ],
     stock: 52,
     reviewCount: 33,
@@ -1500,8 +1486,8 @@ export const catalog = [
     preview: "15 LCD keys. Drag-and-drop macros. Works with 100+ apps.",
     description: "A 15-key LCD macro controller that displays custom icons on each key and executes macros, app-switching, system controls, or any key sequence. USB-C, drag-and-drop configuration, no coding required.",
     images: [
-      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef",
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf",
+      "https://images.unsplash.com/photo-1510674485131-dc88d96369b4",
+      "https://images.unsplash.com/photo-1631749352438-7d576312185d",
     ],
     stock: 21,
     reviewCount: 58,
@@ -1515,8 +1501,8 @@ export const catalog = [
     preview: "12\" blade. 5 speeds. 22 dB at low. USB-C powered.",
     description: "A 12-inch desk fan powered by USB-C at 15W. Five speed settings from 22 dB (barely audible) to 45 dB. Matte white housing with a brushed aluminum grille. 90-degree pivot for directing airflow.",
     images: [
-      "https://images.unsplash.com/photo-1615526675259-025a6691f3a4",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1614624533048-a9c2f9cb5a96",
+      "https://images.unsplash.com/photo-1636736565150-5c927372cbca",
     ],
     stock: 74,
     reviewCount: 29,
@@ -1532,8 +1518,8 @@ export const catalog = [
     preview: "Hybrid ANC. 30h battery. Lossless audio via USB-C.",
     description: "Closed-back over-ear headphones with hybrid ANC that adapts to your environment every 200ms. 30 hours at low volume, 22 with ANC on. Lossless audio over USB-C, Bluetooth 5.3 wireless. Protein leather cushions.",
     images: [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
-      "https://images.unsplash.com/photo-1545127398-14699f92334b",
+      "https://images.unsplash.com/photo-1646500366920-b4c5ce29237d",
+      "https://images.unsplash.com/photo-1682391130094-e4e19f9290e9",
     ],
     stock: 24,
     reviewCount: 97,
@@ -1547,8 +1533,8 @@ export const catalog = [
     preview: "10\" ring. 3 color temps. Gooseneck clip. 10 brightness levels.",
     description: "A 10-inch ring light on a flexible gooseneck clamp that attaches to any desk edge or monitor top. Three color temperatures (3000K, 4500K, 6000K), ten brightness levels, USB-A powered.",
     images: [
-      "https://images.unsplash.com/photo-1616161560417-2b3dd9d4ae4a",
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
+      "https://images.unsplash.com/photo-1570618210461-fd5f194f9b59",
+      "https://images.unsplash.com/photo-1648316316198-5f15553e55df",
     ],
     stock: 83,
     reviewCount: 61,
@@ -1562,8 +1548,8 @@ export const catalog = [
     preview: "36×24\" tempered glass. Ghost-free erase. No frame.",
     description: "A 36-by-24-inch frameless tempered glass whiteboard that mounts flush to the wall on two hidden fixings. Standard dry-erase markers wipe clean without ghosting. Never needs resurfacing.",
     images: [
-      "https://images.unsplash.com/photo-1588693363434-03462c39e4c1",
-      "https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9",
+      "https://images.unsplash.com/photo-1651748749471-ffb243c9ca2b",
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b",
     ],
     stock: 13,
     reviewCount: 24,
@@ -1577,8 +1563,8 @@ export const catalog = [
     preview: "24×18\" linen-panel + cork border. Ash frame.",
     description: "A combined memo board with a linen center panel for pinning notes and a cork border for overflow. Ash wood frame, 24 by 18 inches. Comes with 20 brass push-pins.",
     images: [
-      "https://images.unsplash.com/photo-1531346878377-a5be20888e57",
-      "https://images.unsplash.com/photo-1583341655648-78bdf4ed6d13",
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944",
+      "https://images.unsplash.com/photo-1585298723682-7115561c51b7",
     ],
     stock: 41,
     reviewCount: 17,
@@ -1592,8 +1578,8 @@ export const catalog = [
     preview: "DECT 6.0. 400 ft range. 12h call time. Noise-canceling boom mic.",
     description: "A wireless DECT 6.0 headset with a 400-foot range and 12 hours of talk time per charge. The noise-canceling boom mic filters background noise to below 40 dB. Pairs with desk phones, softphones, and computers.",
     images: [
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90",
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b",
+      "https://images.unsplash.com/photo-1713801129175-8e60c67e0412",
     ],
     stock: 16,
     reviewCount: 34,
@@ -1607,8 +1593,8 @@ export const catalog = [
     preview: "36 erasable pages. Scan to cloud. Wipe clean with damp cloth.",
     description: "A 36-page notepad with a stone-paper surface that stores up to 36 pages of handwritten notes. Scan with the companion app to send to Notion, Evernote, or email. Wipe clean with a damp cloth and reuse.",
     images: [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363",
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+      "https://images.unsplash.com/photo-1483032469466-b937c425697b",
+      "https://images.unsplash.com/photo-1533225307893-db39ecce099a",
     ],
     stock: 98,
     reviewCount: 42,
@@ -1622,8 +1608,8 @@ export const catalog = [
     preview: "Polished brass. 3\" diameter. Crisp single-note ring.",
     description: "A polished solid brass desk bell with a spring-steel mechanism. Satisfying to press, crisp single-note ring. 3-inch base, weighted enough to stay put. The brass will develop a warm patina without polish.",
     images: [
-      "https://images.unsplash.com/photo-1586281380426-83e9cfe0c5f0",
-      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e",
+      "https://images.unsplash.com/photo-1585771724684-38269d6639fd",
+      "https://images.unsplash.com/photo-1531860898813-8cecde84646c",
     ],
     stock: 67,
     reviewCount: 8,
@@ -1637,8 +1623,8 @@ export const catalog = [
     preview: "360° sound. 12h battery. Linen grille. USB-C charge.",
     description: "A compact 360-degree Bluetooth speaker in a powder-coated aluminum housing with a linen-wrapped grille. 12 hours of battery, USB-C charging, pairs with a second unit for stereo. IPX5 water resistant.",
     images: [
-      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
-      "https://images.unsplash.com/photo-1589256469067-ea99122bbdc4",
+      "https://images.unsplash.com/photo-1658927420987-488ade098001",
+      "https://images.unsplash.com/photo-1646500366920-b4c5ce29237d",
     ],
     stock: 44,
     reviewCount: 53,
@@ -1652,8 +1638,8 @@ export const catalog = [
     preview: "Fills shadows on video calls. 2700–6500K. USB powered.",
     description: "A panel light designed to sit above a monitor and fill facial shadows during video calls. 3200 lux at arm length, 2700–6500K tunable, USB powered. Silicone mount grips any bezel thickness without scratching.",
     images: [
-      "https://images.unsplash.com/photo-1616161560417-2b3dd9d4ae4a",
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf",
+      "https://images.unsplash.com/photo-1682391130094-e4e19f9290e9",
+      "https://images.unsplash.com/photo-1570618210461-fd5f194f9b59",
     ],
     stock: 31,
     reviewCount: 28,
@@ -1667,8 +1653,8 @@ export const catalog = [
     preview: "Dual-angle. Holds phones and 11\" tablets. Cable slot.",
     description: "A bamboo stand with two angle positions — 55° for video calls and 75° for reading. Padded cradle, bottom slot for passing a charging cable through. Holds phones up to 7 inches and tablets up to 11 inches.",
     images: [
-      "https://images.unsplash.com/photo-1593640495253-23196b27a87f",
-      "https://images.unsplash.com/photo-1615526675259-025a6691f3a4",
+      "https://images.unsplash.com/photo-1648316316198-5f15553e55df",
+      "https://images.unsplash.com/photo-1651748749471-ffb243c9ca2b",
     ],
     stock: 116,
     reviewCount: 31,
@@ -1699,8 +1685,8 @@ export const catalog = [
     preview: "100 gsm ruled paper. Legal size. Wire-bound. Lay flat.",
     description: "Three wire-bound legal pads on 100 gsm ruled stock — heavy enough for fountain pens, smooth enough for ballpoints. Legal size (8.5×14\"), 50 sheets each. The covers are kraft board, not the flimsy kind.",
     images: [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363",
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+      "https://images.unsplash.com/photo-1579017308347-e53e0d2fc5e9",
+      "https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd",
     ],
     stock: 88,
     reviewCount: 14,
@@ -1714,8 +1700,8 @@ export const catalog = [
     preview: "6 colors. 50 ml glass bottles. Pigment-based, water-resistant.",
     description: "Six 50 ml glass bottles of pigment-based fountain pen ink — Charcoal, Forest, Oxblood, Slate, Ivory, and Midnight. Pigment formula is water-resistant and archival-stable to 100 years. Works in all converters.",
     images: [
-      "https://images.unsplash.com/photo-1509824189536-24ab5d1ecb00",
-      "https://images.unsplash.com/photo-1473186505569-9c61870c11f9",
+      "https://images.unsplash.com/photo-1501618669935-18b6ecb13d6d",
+      "https://images.unsplash.com/photo-1483546416237-76fd26bbcdd1",
     ],
     stock: 36,
     reviewCount: 18,
@@ -1729,8 +1715,8 @@ export const catalog = [
     preview: "Standard 26/6 staples. Solid metal body. 20-sheet capacity.",
     description: "A full-metal stapler with a copper-plated finish over zinc alloy. Uses standard 26/6 staples, staples 20 sheets. The hinge is strong enough that it never requires two hands.",
     images: [
-      "https://images.unsplash.com/photo-1583864697784-a0efc8379f70",
-      "https://images.unsplash.com/photo-1561861422-a549073e547a",
+      "https://images.unsplash.com/photo-1462642109801-4ac2971a3a51",
+      "https://images.unsplash.com/photo-1591195852468-03a01d1375d6",
     ],
     stock: 47,
     reviewCount: 12,
@@ -1744,8 +1730,8 @@ export const catalog = [
     preview: "10\" overall. Hand-ground edge. Tapered handle.",
     description: "A 10-inch letter opener in solid brass with a hand-ground edge and a tapered handle. Heavy enough to stay put as a desk weight when not in use. The brass changes color slowly with handling.",
     images: [
-      "https://images.unsplash.com/photo-1586281380426-83e9cfe0c5f0",
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
+      "https://images.unsplash.com/photo-1483546363825-7ebf25fb7513",
+      "https://images.unsplash.com/photo-1587135991058-8816b028691f",
     ],
     stock: 62,
     reviewCount: 9,
@@ -1759,8 +1745,8 @@ export const catalog = [
     preview: "Walnut + brass. Slide blocks for date. Never expires.",
     description: "A perpetual desk calendar in solid walnut with sliding brass-rimmed date blocks for day and month. It will never be out of date. 5 inches tall, weighted base. Ships with a cloth to maintain the finish.",
     images: [
-      "https://images.unsplash.com/photo-1564091880021-bb02f2b2928d",
-      "https://images.unsplash.com/photo-1531346878377-a5be20888e57",
+      "https://images.unsplash.com/photo-1550592704-6c76defa9985",
+      "https://images.unsplash.com/photo-1623697899811-f2403f50685e",
     ],
     stock: 29,
     reviewCount: 21,
@@ -1774,8 +1760,8 @@ export const catalog = [
     preview: "3 stamps. Laser-cut rubber. Walnut handles. Archival ink pad.",
     description: "Three laser-cut rubber stamps on solid walnut handles: a monogram, a date wheel, and an 'Approved' block. Includes an archival black ink pad. The monogram is laser-engraved to your specification at order.",
     images: [
-      "https://images.unsplash.com/photo-1578020190125-f4f7c18bc9cb",
-      "https://images.unsplash.com/photo-1583341655648-78bdf4ed6d13",
+      "https://images.unsplash.com/photo-1598620617148-c9e8ddee6711",
+      "https://images.unsplash.com/photo-1601321268954-22646044f7d0",
     ],
     stock: 33,
     reviewCount: 6,
@@ -1789,8 +1775,8 @@ export const catalog = [
     preview: "5 colors. Ink-injected. Aluminum barrels. 200 refills each.",
     description: "Five aluminum-barrel highlighters that you refill with ink — no more tossing a dry highlighter. Comes with a 10 ml refill vial per color: Yellow, Sky, Coral, Sage, and Lavender. Each vial gives roughly 200 refills.",
     images: [
-      "https://images.unsplash.com/photo-1569578943539-5f83c3e92e2f",
-      "https://images.unsplash.com/photo-1544816155-12df9643f363",
+      "https://images.unsplash.com/photo-1516414447565-b14be0adf13e",
+      "https://images.unsplash.com/photo-1473186505569-9c61870c11f9",
     ],
     stock: 71,
     reviewCount: 37,
@@ -1806,8 +1792,8 @@ export const catalog = [
     preview: "Holds two monitors up to 32\". Independent height + tilt.",
     description: "A dual-arm monitor stand that holds two screens up to 32 inches and 17 lbs each, fully independently. Internal cable channels keep cords out of sight. C-clamp and desk-grommet both included.",
     images: [
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1760348213285-c6dd101bf349",
+      "https://images.unsplash.com/photo-1526958938731-27f1ccdb1817",
     ],
     stock: 31,
     reviewCount: 88,
@@ -1821,8 +1807,8 @@ export const catalog = [
     preview: "Dual-density foam. Adjustable strap. Linen cover.",
     description: "A dual-density lumbar cushion with a firmer outer layer and a softer inner core. The adjustable strap fits chairs from 14 to 22 inches wide. Removable linen cover, machine washable.",
     images: [
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597",
-      "https://images.unsplash.com/photo-1578116922645-3976907a7671",
+      "https://images.unsplash.com/photo-1631755218195-8d8e7b2c04d6",
+      "https://images.unsplash.com/photo-1646768878729-ac69ab1cdb42",
     ],
     stock: 58,
     reviewCount: 43,
@@ -1836,8 +1822,8 @@ export const catalog = [
     preview: "Mounts to monitor arm or desk. 5 angles. Holds 300 pages.",
     description: "A document holder that clips to a monitor arm or stands independently on a weighted base. Five angle positions from flat to 70 degrees. A sliding line guide keeps your place. Holds up to 300 sheets.",
     images: [
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
-      "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89",
+      "https://images.unsplash.com/photo-1537301496981-ceee9e41384a",
+      "https://images.unsplash.com/photo-1760348213270-7cd00b8c3405",
     ],
     stock: 44,
     reviewCount: 19,
@@ -1851,8 +1837,8 @@ export const catalog = [
     preview: "Cast brass. 8\" arc. USB-A port in base.",
     description: "A cast solid brass headphone stand with a smooth 8-inch arc and a weighted base. A USB-A port in the base lets you charge a device while your headphones sit on it. The brass develops a warm patina.",
     images: [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
-      "https://images.unsplash.com/photo-1583394838336-acd977736f90",
+      "https://images.unsplash.com/photo-1653191722556-abd24773bba8",
+      "https://images.unsplash.com/photo-1707167144717-683f1714939b",
     ],
     stock: 37,
     reviewCount: 24,
@@ -1866,8 +1852,8 @@ export const catalog = [
     preview: "Neodymium magnet. Holds 1–4 cables each. Desk-edge or wall.",
     description: "Twelve silicone cable clips with embedded neodymium magnets. Stick to any steel desk surface or attach with the included adhesive plate. Each clip holds one to four cables. No velcro, no adhesive on the cable.",
     images: [
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+      "https://images.unsplash.com/photo-1630951633296-dcc73fab12ca",
+      "https://images.unsplash.com/photo-1671063125680-a2ebbebfbae5",
     ],
     stock: 124,
     reviewCount: 56,
@@ -1881,8 +1867,8 @@ export const catalog = [
     preview: "MagSafe slot. Watch peg. USB-C pass-through.",
     description: "A solid walnut phone stand with a MagSafe-compatible slot and a small wooden peg on the side for hanging a smartwatch. USB-C cable exits through a routed channel in the base. One clean piece, no fasteners visible.",
     images: [
-      "https://images.unsplash.com/photo-1615526675259-025a6691f3a4",
-      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
+      "https://images.unsplash.com/photo-1630209351449-14f60b0e4103",
+      "https://images.unsplash.com/photo-1727464996084-3cc1ec8e04ea",
     ],
     stock: 49,
     reviewCount: 38,
@@ -1896,8 +1882,8 @@ export const catalog = [
     preview: "10mm glass top. Holds 44 lbs. Open shelf underneath.",
     description: "A monitor riser in 10mm tempered glass over brushed aluminum legs. Raises a monitor 5 inches, holds up to 44 lbs, and leaves a full 21-by-10-inch shelf underneath for a keyboard, notebook, or hard drive.",
     images: [
-      "https://images.unsplash.com/photo-1593640495253-23196b27a87f",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1755309448312-8776b3d098f0",
+      "https://images.unsplash.com/photo-1590408867096-a6f7a9de19c0",
     ],
     stock: 26,
     reviewCount: 31,
@@ -1911,8 +1897,8 @@ export const catalog = [
     preview: "Vibrates when you slouch. 7-day battery. App coaching.",
     description: "A small wearable sensor that adheres to the upper back and vibrates gently when your posture drops below your calibrated baseline. Seven-day battery per charge, syncs with an iOS and Android coaching app.",
     images: [
-      "https://images.unsplash.com/photo-1590416606655-07e0e5de8e9a",
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597",
+      "https://images.unsplash.com/photo-1750975314977-374f2290db53",
+      "https://images.unsplash.com/photo-1760348213285-c6dd101bf349",
     ],
     stock: 63,
     reviewCount: 47,
@@ -1926,8 +1912,8 @@ export const catalog = [
     preview: "Clamps to desk. 360° rotation. Holds laptops 11–16\".",
     description: "A desk-clamp arm that holds a laptop or tablet at eye level while you type on an external keyboard. 360-degree rotation, 180-degree tilt, adjusts from 14 to 22 inches above the desk surface. Fits devices 11 to 16 inches.",
     images: [
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
-      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9",
+      "https://images.unsplash.com/photo-1526958938731-27f1ccdb1817",
+      "https://images.unsplash.com/photo-1631755218195-8d8e7b2c04d6",
     ],
     stock: 38,
     reviewCount: 22,
@@ -1943,8 +1929,8 @@ export const catalog = [
     preview: "Clips to monitor or shelf. 500 lux. Dimmable.",
     description: "A slim LED task light that clips to a monitor bezel, shelf edge, or headboard. 500 lux at 12 inches, dimmable from 10% to 100% via a touch strip. USB-A powered. Folds flat for travel.",
     images: [
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
-      "https://images.unsplash.com/photo-1621177555452-bedbe4c28879",
+      "https://images.unsplash.com/photo-1731762524352-b5663f83a830",
+      "https://images.unsplash.com/photo-1711617481872-7851c36cc5c9",
     ],
     stock: 61,
     reviewCount: 48,
@@ -1958,8 +1944,8 @@ export const catalog = [
     preview: "6500K. 4 strips cover up to 55\" monitor. USB powered.",
     description: "A four-piece LED strip kit for behind-monitor bias lighting. 6500K daylight color temperature — matched to most monitor presets. USB powered, adhesive backing, corner connectors included. Reduces eye strain on dark-background work.",
     images: [
-      "https://images.unsplash.com/photo-1593640495253-23196b27a87f",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1574025876844-6c9ba8602866",
+      "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85",
     ],
     stock: 89,
     reviewCount: 74,
@@ -1973,8 +1959,8 @@ export const catalog = [
     preview: "Hand-riveted brass panels. E26 base. 15\" tall.",
     description: "A 15-inch table lamp in antiqued brass with hand-riveted panels and a cathedral-glass side. Fits any E26 bulb. The hammered panels throw a warm pattern on the wall around it.",
     images: [
-      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89",
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
+      "https://images.unsplash.com/photo-1621177555630-b861919c864f",
+      "https://images.unsplash.com/photo-1621177555452-bedbe4c28879",
     ],
     stock: 14,
     reviewCount: 11,
@@ -1988,8 +1974,8 @@ export const catalog = [
     preview: "8h run time. 3 brightness levels. Ceramic base.",
     description: "A cordless table lamp with a ceramic base and a linen shade. Eight hours of run time per charge, three brightness levels. Charges via a hidden USB-C port in the base. Bring it to the conference table or the couch.",
     images: [
-      "https://images.unsplash.com/photo-1526040652367-ac003a0475fe",
-      "https://images.unsplash.com/photo-1582356630861-61bb9b41f541",
+      "https://images.unsplash.com/photo-1570974802254-4b0ad1a755f5",
+      "https://images.unsplash.com/photo-1579326882518-21eaa7893b02",
     ],
     stock: 22,
     reviewCount: 35,
@@ -2003,8 +1989,8 @@ export const catalog = [
     preview: "2700–6500K. Matter + Thread. 800 lm each. E26.",
     description: "Four E26 smart bulbs that shift from 6500K at 9 AM to 2700K at sunset automatically. Matter-over-Thread, works with all major platforms without a hub. 800 lumens each, dimmable to 1%.",
     images: [
-      "https://images.unsplash.com/photo-1517059224940-d4af9eec41b7",
-      "https://images.unsplash.com/photo-1570974802254-4b0ad1a755f5",
+      "https://images.unsplash.com/photo-1601642964568-1917224f4e4d",
+      "https://images.unsplash.com/photo-1526040652367-ac003a0475fe",
     ],
     stock: 47,
     reviewCount: 62,
@@ -2018,8 +2004,8 @@ export const catalog = [
     preview: "Fabric-wrapped cord. Inline dimmer. E26. No hardwiring.",
     description: "A wall sconce with a hand-spun linen shade and a fabric-wrapped plug-in cord with an inline dimmer — no electrician needed. E26 base, brass wall plate. The cord runs 6 feet to a standard outlet.",
     images: [
-      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89",
-      "https://images.unsplash.com/photo-1570974802254-4b0ad1a755f5",
+      "https://images.unsplash.com/photo-1585597647877-6eaa01bf9a05",
+      "https://images.unsplash.com/photo-1543512214-4f76e81f8bfc",
     ],
     stock: 19,
     reviewCount: 17,
@@ -2033,8 +2019,8 @@ export const catalog = [
     preview: "Gooseneck clamp. Full spectrum 6000K. Timer. USB-A.",
     description: "A gooseneck clip-on grow light for desk plants. Full-spectrum 6000K LED promotes leaf growth, flowering, and fruit set. Built-in 4/8/12 hour auto-timer. USB-A powered, clamp fits shelves up to 2 inches.",
     images: [
-      "https://images.unsplash.com/photo-1485955900006-10f4d324d411",
-      "https://images.unsplash.com/photo-1521649415036-659258dc424f",
+      "https://images.unsplash.com/photo-1614743559948-d158e36ecb4f",
+      "https://images.unsplash.com/photo-1652198050957-fd1c6aab021f",
     ],
     stock: 76,
     reviewCount: 29,
@@ -2048,8 +2034,8 @@ export const catalog = [
     preview: "Natural salt crystal. Warm amber glow. Dimmer switch.",
     description: "A hand-carved Himalayan rock salt lamp in a natural amber tone. The dimmer switch built into the cord goes from a faint glow to full amber. Each lamp is a unique shape. Weighted wooden base.",
     images: [
-      "https://images.unsplash.com/photo-1617363020293-62faac14783d",
-      "https://images.unsplash.com/photo-1530811761207-8d9d22f0a141",
+      "https://images.unsplash.com/photo-1619608135352-868e8313e121",
+      "https://images.unsplash.com/photo-1731762524352-b5663f83a830",
     ],
     stock: 54,
     reviewCount: 33,
@@ -2063,8 +2049,8 @@ export const catalog = [
     preview: "Solid walnut legs. Linen drum shade. 58\" tall. E26.",
     description: "A floor lamp on three solid walnut legs with a 14-inch natural linen drum shade. 58 inches from floor to shade top. Inline foot switch on the 6-foot cloth cord. E26 base fits any bulb including smart.",
     images: [
-      "https://images.unsplash.com/photo-1517059224940-d4af9eec41b7",
-      "https://images.unsplash.com/photo-1526040652367-ac003a0475fe",
+      "https://images.unsplash.com/photo-1711617481872-7851c36cc5c9",
+      "https://images.unsplash.com/photo-1574025876844-6c9ba8602866",
     ],
     stock: 13,
     reviewCount: 16,
@@ -2080,8 +2066,8 @@ export const catalog = [
     preview: "100% merino. 50×70\". Herringbone weave. Machine wash cold.",
     description: "A 50-by-70-inch merino wool throw in a tight herringbone weave. Warm enough for a drafty office, light enough to fold into a chair arm. Machine washable cold, lays flat to dry. Available in Oat, Charcoal, and Sage.",
     images: [
-      "https://images.unsplash.com/photo-1585664811087-47f65abbad64",
-      "https://images.unsplash.com/photo-1544816155-12df9643f363",
+      "https://images.unsplash.com/photo-1777882201052-a746eb59264d",
+      "https://images.unsplash.com/photo-1596420547408-0f11aaeff6ba",
     ],
     stock: 41,
     reviewCount: 27,
@@ -2095,8 +2081,8 @@ export const catalog = [
     preview: "26\" square. Buckwheat fill. Removable washed-linen cover.",
     description: "A 26-inch square floor cushion with a buckwheat hull fill — it compresses to your exact shape and holds it. Removable washed-linen cover in Natural, Ochre, or Slate. The cover is machine washable.",
     images: [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-      "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea",
+      "https://images.unsplash.com/photo-1777738982318-73c3c3fba29c",
+      "https://images.unsplash.com/photo-1772795810264-2b46ab4622ea",
     ],
     stock: 34,
     reviewCount: 14,
@@ -2110,8 +2096,8 @@ export const catalog = [
     preview: "Two natural agate halves. Each pair unique.",
     description: "A pair of polished agate geode halves used as bookends. Each pair is unique — the exterior is rough stone and the interior shows full crystalline druzy. Weighted felt-padded bases. No two pairs are alike.",
     images: [
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d",
+      "https://images.unsplash.com/photo-1611651625032-153048f0da00",
+      "https://images.unsplash.com/photo-1766038843994-e17d3a7357ac",
     ],
     stock: 18,
     reviewCount: 9,
@@ -2125,8 +2111,8 @@ export const catalog = [
     preview: "12×8\" tray. White sand, stones, bamboo rake set.",
     description: "A 12-by-8-inch lacquered walnut tray with fine white sand, eight smooth river stones, and three bamboo rakes. Use it between calls. No instructions — you already know how.",
     images: [
-      "https://images.unsplash.com/photo-1564091880021-bb02f2b2928d",
-      "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7",
+      "https://images.unsplash.com/photo-1743186496240-b6cd07a9cdae",
+      "https://images.unsplash.com/photo-1773995419788-451aec4bfdef",
     ],
     stock: 57,
     reviewCount: 23,
@@ -2140,8 +2126,8 @@ export const catalog = [
     preview: "Two-color risograph. 11×17\". 100 gsm uncoated stock.",
     description: "A two-color risograph print in forest green and warm black on 100 gsm uncoated stock. Printed in an edition of 200 and hand-numbered. The ink sits slightly raised on the paper in the way risograph prints always do.",
     images: [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d",
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
+      "https://images.unsplash.com/photo-1761375211973-86625f5c5cba",
+      "https://images.unsplash.com/photo-1687848666831-ceeabe541295",
     ],
     stock: 62,
     reviewCount: 6,
@@ -2155,8 +2141,8 @@ export const catalog = [
     preview: "6 oils. 10 ml glass dropper bottles. Cedar, Bergamot, Peppermint, Eucalyptus, Vetiver, Lavender.",
     description: "Six 10 ml pure essential oils for the desk diffuser: Cedar, Bergamot, Peppermint, Eucalyptus, Vetiver, and Lavender. Single-origin, undiluted. Glass dropper bottles with aluminum caps. Compatible with any ultrasonic diffuser.",
     images: [
-      "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7",
-      "https://images.unsplash.com/photo-1612293905607-b003de9e54fb",
+      "https://images.unsplash.com/photo-1766241694661-b9fade569f91",
+      "https://images.unsplash.com/photo-1777451440783-7da36ec76377",
     ],
     stock: 68,
     reviewCount: 44,
@@ -2172,8 +2158,8 @@ export const catalog = [
     preview: "Walnut veneer. Full-extension drawers. Holds letter + legal.",
     description: "A two-drawer lateral file cabinet in walnut veneer on a powder-coated steel carcass. Full-extension ball-bearing slides, a lock on the top drawer, and felt-lined interiors. Holds letter and legal hanging files side-by-side.",
     images: [
-      "https://images.unsplash.com/photo-1568013519834-7bd7f32e4f5c",
-      "https://images.unsplash.com/photo-1588854337236-6889d631faa8",
+      "https://images.unsplash.com/photo-1629652486739-c7df300a69e0",
+      "https://images.unsplash.com/photo-1600422086908-72be2c8f5f3f",
     ],
     stock: 8,
     reviewCount: 17,
@@ -2187,8 +2173,8 @@ export const catalog = [
     preview: "Acid-free. Linen-wrapped. Letter size. Stackable.",
     description: "Six linen-wrapped archival boxes in a letter-size format, acid-free and lignin-free. Each closes with a brass clasp. Stackable up to six high. Use them for documents, photographs, or anything you want to keep in 50 years.",
     images: [
-      "https://images.unsplash.com/photo-1586281380426-83e9cfe0c5f0",
-      "https://images.unsplash.com/photo-1531346878377-a5be20888e57",
+      "https://images.unsplash.com/photo-1603533880965-e1302f35290b",
+      "https://images.unsplash.com/photo-1521459382675-a3f2f35a6b9a",
     ],
     stock: 52,
     reviewCount: 11,
@@ -2202,8 +2188,8 @@ export const catalog = [
     preview: "Linen-covered hardboard. Letter size. 4-pack with labels.",
     description: "Four upright magazine files in linen-covered hardboard with a kraft label window on the spine. Letter size, holds about 40 issues each. Weighted bottom keeps them from tipping when near-empty.",
     images: [
-      "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e",
-      "https://images.unsplash.com/photo-1586281380349-632531db7ed4",
+      "https://images.unsplash.com/photo-1765371513189-44702dcee4be",
+      "https://images.unsplash.com/photo-1721521918228-90eeed46f52d",
     ],
     stock: 73,
     reviewCount: 22,
@@ -2217,8 +2203,8 @@ export const catalog = [
     preview: "Steel rail system. 4 modular bins. No tools, clamp-mount.",
     description: "A steel rail that clamps under the desk with four modular bins hanging from it. Use it for headphones, a notebook, charging cables, or a small speaker. Holds 12 lbs total. No drilling.",
     images: [
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
+      "https://images.unsplash.com/photo-1649954174454-767fd0a40fb6",
+      "https://images.unsplash.com/photo-1528027656671-6d156f4f1f48",
     ],
     stock: 37,
     reviewCount: 28,
@@ -2232,8 +2218,8 @@ export const catalog = [
     preview: "24×18\" steel grid. 8 hooks + 2 shelves included. Wall-mount.",
     description: "A 24-by-18-inch powder-coated steel wire grid that mounts on two wall anchors and accepts S-hooks, small shelves, and cable clips. Eight S-hooks and two small flat shelves included. The accessories attach without tools.",
     images: [
-      "https://images.unsplash.com/photo-1588854337236-6889d631faa8",
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1668893973066-95b14ce86e71",
+      "https://images.unsplash.com/photo-1718133459670-24c55af0fae6",
     ],
     stock: 44,
     reviewCount: 19,
@@ -2247,8 +2233,8 @@ export const catalog = [
     preview: "Bamboo top. Pull-out drawer. Cushion base. 18×12\".",
     description: "A bamboo lap desk with a pull-out storage drawer underneath the 18-by-12-inch top surface. The cushion base has a non-slip bottom for use on a couch or bed. Drawer holds notebooks, pens, and a phone.",
     images: [
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
-      "https://images.unsplash.com/photo-1519219788971-8d9797e0928e",
+      "https://images.unsplash.com/photo-1605484583258-221ca6812773",
+      "https://images.unsplash.com/photo-1748681257876-44e2aa2070b4",
     ],
     stock: 59,
     reviewCount: 34,
@@ -2262,8 +2248,8 @@ export const catalog = [
     preview: "0.15 cu ft. Fingerprint + key backup. Steel. USB-A charging port.",
     description: "A 0.15-cubic-foot desktop safe in 14-gauge steel with a biometric fingerprint reader and a backup key. Stores a passport, hard drives, a small handgun, or documents. USB-A port on the interior for charging.",
     images: [
-      "https://images.unsplash.com/photo-1568013519834-7bd7f32e4f5c",
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
+      "https://images.unsplash.com/photo-1701795685126-1a047a9a03d9",
+      "https://images.unsplash.com/photo-1776482128061-0367ecc2028c",
     ],
     stock: 21,
     reviewCount: 16,
@@ -2277,8 +2263,8 @@ export const catalog = [
     preview: "Solid white oak. 72\" tall × 36\" wide. Anti-tip hardware.",
     description: "A five-shelf bookcase in solid white oak with adjustable shelf heights on 1-inch increments. 72 inches tall, 36 inches wide, 12 inches deep. Wall anchor and anti-tip strap included.",
     images: [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace",
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "https://images.unsplash.com/photo-1720007292383-c8516d467bd0",
+      "https://images.unsplash.com/photo-1629652486739-c7df300a69e0",
     ],
     stock: 9,
     reviewCount: 38,
@@ -2294,8 +2280,8 @@ export const catalog = [
     preview: "13\" × 4\". EVA foam. Fits under a desk. Grid texture.",
     description: "A 13-by-4-inch foam roller compact enough to keep under or beside a desk. Grid texture targets deeper muscle tissue than smooth rollers. High-density EVA foam holds shape after years of use.",
     images: [
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+      "https://images.unsplash.com/photo-1738524108286-9a24f62813c0",
+      "https://images.unsplash.com/photo-1541757089-314a0d7bdb59",
     ],
     stock: 67,
     reviewCount: 21,
@@ -2309,8 +2295,8 @@ export const catalog = [
     preview: "Smooth, spiked, double peanut. Natural rubber.",
     description: "Three massage balls in natural rubber: a smooth 2.5-inch lacrosse ball, a 2.5-inch spiked trigger-point ball, and a double peanut ball for the thoracic spine. Fits in a desk drawer.",
     images: [
-      "https://images.unsplash.com/photo-1590416606655-07e0e5de8e9a",
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597",
+      "https://images.unsplash.com/photo-1599447291850-9ea36b0a3d66",
+      "https://images.unsplash.com/photo-1541757088-1c919081357f",
     ],
     stock: 83,
     reviewCount: 16,
@@ -2324,8 +2310,8 @@ export const catalog = [
     preview: "5 bands. 10–50 lbs. Loop handles. Anchor strap for chair leg.",
     description: "Five loop resistance bands from 10 to 50 pounds with a door-anchor strap that fits a chair leg. Do rows, curls, shoulder presses, and stretches without leaving your desk. Natural latex, storage pouch included.",
     images: [
-      "https://images.unsplash.com/photo-1620188526357-9c126ee49d2b",
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+      "https://images.unsplash.com/photo-1738524108206-458a7bd6560e",
+      "https://images.unsplash.com/photo-1591291621164-2c6367723315",
     ],
     stock: 78,
     reviewCount: 34,
@@ -2339,8 +2325,8 @@ export const catalog = [
     preview: "Solid brass. 3 tone options. 5–60 min intervals. No app.",
     description: "A solid brass timer bell with three selectable tones and interval settings from 5 to 60 minutes. Rings once to start, once at the midpoint if set, once to end. No app, no Bluetooth, no notifications.",
     images: [
-      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c",
-      "https://images.unsplash.com/photo-1564091880021-bb02f2b2928d",
+      "https://images.unsplash.com/photo-1591291621060-89264efbeaed",
+      "https://images.unsplash.com/photo-1661307897681-f2bec8f8383e",
     ],
     stock: 41,
     reviewCount: 27,
@@ -2354,8 +2340,8 @@ export const catalog = [
     preview: "3 heat settings. Auto-shutoff 2 hrs. Fleece cover.",
     description: "A USB-powered lumbar heating pad with three heat settings (100°F, 113°F, 131°F) and a two-hour auto-shutoff. The fleece cover is removable and machine washable. Wraps to a chair back with two adjustable straps.",
     images: [
-      "https://images.unsplash.com/photo-1578116922645-3976907a7671",
-      "https://images.unsplash.com/photo-1545205597-3d9d02c29597",
+      "https://images.unsplash.com/photo-1646376248949-9db1b3b7bce4",
+      "https://images.unsplash.com/photo-1585076795621-7431cc05b271",
     ],
     stock: 52,
     reviewCount: 18,
@@ -2369,8 +2355,8 @@ export const catalog = [
     preview: "Memory foam. 360° support. Washable cover.",
     description: "A memory foam neck pillow with a 360-degree support collar and an adjustable snap closure. Use it at the desk during short rest sessions or on a flight. Removable machine-washable cover in washed linen.",
     images: [
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+      "https://images.unsplash.com/photo-1541757089-5ac641ab48cd",
+      "https://images.unsplash.com/photo-1653617748437-895c016e88b1",
     ],
     stock: 44,
     reviewCount: 12,
@@ -2384,8 +2370,8 @@ export const catalog = [
     preview: "22 oz. LED glow reminder every hour. BPA-free Tritan.",
     description: "A 22 oz BPA-free Tritan bottle with an LED base that glows gently once per hour as a reminder to drink. USB-C rechargeable base, 7-day battery per charge. Time markers printed on the side.",
     images: [
-      "https://images.unsplash.com/photo-1585585089515-5c85b02c4b84",
-      "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d",
+      "https://images.unsplash.com/photo-1763004871583-4183d64096b1",
+      "https://images.unsplash.com/photo-1599447291786-724cfd131568",
     ],
     stock: 61,
     reviewCount: 39,
@@ -2399,8 +2385,8 @@ export const catalog = [
     preview: "Bamboo deck. Rocker base. Engages legs passively while standing.",
     description: "A rocker-style standing board in solid bamboo with a natural rubber base. The 16-degree rocker range keeps legs and core subtly engaged while you stand at a desk. 25 by 11 inches, 250 lb rated.",
     images: [
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773",
+      "https://images.unsplash.com/photo-1611682011252-21667a85e3ac",
+      "https://images.unsplash.com/photo-1738524108286-9a24f62813c0",
     ],
     stock: 29,
     reviewCount: 43,
@@ -2414,8 +2400,8 @@ export const catalog = [
     preview: "52 cards. Illustrated desk stretches. 2–5 min each.",
     description: "A deck of 52 illustrated stretch cards, each with a 2-to-5-minute routine you can do at your desk without standing up. Organized by body region — neck, shoulders, wrists, hips, back. Printed on waterproof stock.",
     images: [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363",
-      "https://images.unsplash.com/photo-1569578943539-5f83c3e92e2f",
+      "https://images.unsplash.com/photo-1541757089-314a0d7bdb59",
+      "https://images.unsplash.com/photo-1599447291850-9ea36b0a3d66",
     ],
     stock: 104,
     reviewCount: 15,
@@ -2429,8 +2415,8 @@ export const catalog = [
     preview: "Organic lavender fill. Silk cover. Warm or cold use.",
     description: "A weighted silk eye pillow filled with organic lavender and flaxseed. Use it warm from the microwave or cool from the freezer. Blocks all light and applies gentle pressure across the brow and eye area.",
     images: [
-      "https://images.unsplash.com/photo-1572726729207-a78d6feb18d7",
-      "https://images.unsplash.com/photo-1612293905607-b003de9e54fb",
+      "https://images.unsplash.com/photo-1541757088-1c919081357f",
+      "https://images.unsplash.com/photo-1738524108206-458a7bd6560e",
     ],
     stock: 76,
     reviewCount: 31,
@@ -2446,8 +2432,8 @@ export const catalog = [
     preview: "100 individually wrapped. Alcohol-free. Safe for all coatings.",
     description: "A hundred individually wrapped screen wipes, alcohol-free and safe for anti-glare coatings, nano-texture glass, and plastics. Leave no streaks. Keep a pack in the desk drawer, one in the bag.",
     images: [
-      "https://images.unsplash.com/photo-1618329027054-0d4cf29d97e6",
-      "https://images.unsplash.com/photo-1588693363434-03462c39e4c1",
+      "https://images.unsplash.com/photo-1679508056709-03167f9c13ba",
+      "https://images.unsplash.com/photo-1664464683525-29b5d442af54",
     ],
     stock: 142,
     reviewCount: 6,
@@ -2461,8 +2447,8 @@ export const catalog = [
     preview: "Plant-derived formula. Safe on wood, leather, glass, metal.",
     description: "A plant-derived cleaning spray safe on unfinished wood, leather, glass, and powder-coated metal. No ammonia, no bleach, no fragrance-mask chemicals. Ships in a glass bottle with a fine-mist top.",
     images: [
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd",
-      "https://images.unsplash.com/photo-1618329027054-0d4cf29d97e6",
+      "https://images.unsplash.com/photo-1630659508975-00941de4d982",
+      "https://images.unsplash.com/photo-1498409785966-ab341407de6e",
     ],
     stock: 96,
     reviewCount: 9,
@@ -2476,8 +2462,8 @@ export const catalog = [
     preview: "Anodized aluminum handle. 60 sheets. Refillable.",
     description: "A compact lint roller in an anodized aluminum handle with 60 adhesive sheets. Refills are universal. Use it on the chair, the rug beneath the desk, or a linen shirt before a call.",
     images: [
-      "https://images.unsplash.com/photo-1583864697784-a0efc8379f70",
-      "https://images.unsplash.com/photo-1561861422-a549073e547a",
+      "https://images.unsplash.com/photo-1755190121589-ee9ef0aaa5a0",
+      "https://images.unsplash.com/photo-1774494168068-0f716c3aafcf",
     ],
     stock: 118,
     reviewCount: 4,
@@ -2491,8 +2477,8 @@ export const catalog = [
     preview: "Solid brass. 500 ml. Fine-mist pump. Develops patina.",
     description: "A 500 ml plant mister in solid brass with a pump handle that produces a fine even mist. No plastic anywhere. The brass changes character as it ages alongside your plants.",
     images: [
-      "https://images.unsplash.com/photo-1521649415036-659258dc424f",
-      "https://images.unsplash.com/photo-1485955900006-10f4d324d411",
+      "https://images.unsplash.com/photo-1618329027054-0d4cf29d97e6",
+      "https://images.unsplash.com/photo-1627905646269-7f034dcc5738",
     ],
     stock: 74,
     reviewCount: 19,
@@ -2506,8 +2492,8 @@ export const catalog = [
     preview: "UV-C LED. 5-min cycle. Fits phones, earbuds, keys.",
     description: "A UV-C LED sanitizer box with a 5-minute cycle that eliminates up to 99.9% of surface bacteria. Large enough for a phone plus earbuds or keys. USB-C powered, silent. Matte white ABS housing.",
     images: [
-      "https://images.unsplash.com/photo-1616161560417-2b3dd9d4ae4a",
-      "https://images.unsplash.com/photo-1615526675259-025a6691f3a4",
+      "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50",
+      "https://images.unsplash.com/photo-1594159855327-c8c0842a2132",
     ],
     stock: 43,
     reviewCount: 22,
@@ -2521,8 +2507,8 @@ export const catalog = [
     preview: "8 wax fill sticks. Touch-up marker. Buffer cloth.",
     description: "A wood repair kit with eight colored fill sticks (light to dark), a fine touch-up marker, and a buffer cloth. Works on solid wood, veneer, and most oil-finished surfaces. Fixes minor scratches and dings in under five minutes.",
     images: [
-      "https://images.unsplash.com/photo-1593640408182-31c228b2e8ad",
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd",
+      "https://images.unsplash.com/photo-1697463624716-cd2f0423d9d9",
+      "https://images.unsplash.com/photo-1698349145149-f1e4126f2531",
     ],
     stock: 84,
     reviewCount: 11,
@@ -2536,8 +2522,8 @@ export const catalog = [
     preview: "500 ml. Penetrates and seals. Works on all hardwoods.",
     description: "A 500 ml can of Danish oil for conditioning oil-finished desks, shelves, and accessories. Penetrates rather than forming a surface coat — so it doesn't peel, it just refreshes. Apply with a lint-free cloth quarterly.",
     images: [
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd",
-      "https://images.unsplash.com/photo-1618329027054-0d4cf29d97e6",
+      "https://images.unsplash.com/photo-1601160458000-2b11f9fa1a0e",
+      "https://images.unsplash.com/photo-1771918050103-57b5de00d960",
     ],
     stock: 61,
     reviewCount: 7,
@@ -2551,8 +2537,8 @@ export const catalog = [
     preview: "50 ml polish cream. Two flannel cloths. Non-abrasive.",
     description: "A 50 ml tin of non-abrasive brass polish and two cotton flannel cloths. Cleans tarnish and oxidation from solid brass without scratching. Use it on lamps, letter openers, card stands, and hardware.",
     images: [
-      "https://images.unsplash.com/photo-1561861422-a549073e547a",
-      "https://images.unsplash.com/photo-1583864697784-a0efc8379f70",
+      "https://images.unsplash.com/photo-1762341116319-05a8355fcfc9",
+      "https://images.unsplash.com/photo-1679508056709-03167f9c13ba",
     ],
     stock: 97,
     reviewCount: 8,
@@ -2566,8 +2552,8 @@ export const catalog = [
     preview: "18\" aluminum rail. 6 removable clips. Mounts under desk edge.",
     description: "An 18-inch aluminum cable management rail that adheres under a desk edge with 3M VHB tape. Six removable clips attach at any position along the rail and release without tools. Organizes charging cables, audio, and USB runs.",
     images: [
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+      "https://images.unsplash.com/photo-1664464683525-29b5d442af54",
+      "https://images.unsplash.com/photo-1630659508975-00941de4d982",
     ],
     stock: 108,
     reviewCount: 26,
@@ -2581,8 +2567,8 @@ export const catalog = [
     preview: "10 oz cans. Bitterant added. Extension tube included.",
     description: "A three-pack of 10-oz compressed air cans for clearing dust from keyboards, vents, and fans. Each can comes with an extension tube for directed blasts. Bitterant agent added to prevent inhalant misuse.",
     images: [
-      "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
-      "https://images.unsplash.com/photo-1583864697784-a0efc8379f70",
+      "https://images.unsplash.com/photo-1498409785966-ab341407de6e",
+      "https://images.unsplash.com/photo-1755190121589-ee9ef0aaa5a0",
     ],
     stock: 126,
     reviewCount: 3,
@@ -2596,7 +2582,7 @@ export const catalog = [
     preview: "4 markers, eraser, spray cleaner. Works on glass boards.",
     description: "A whiteboard starter kit for glass surfaces: four low-odor dry-erase markers in black, blue, red, and green, a felt eraser with a magnetic back, and a 4-oz glass-safe cleaning spray.",
     images: [
-      "https://images.unsplash.com/photo-1588693363434-03462c39e4c1",
+      "https://images.unsplash.com/photo-1774494168068-0f716c3aafcf",
       "https://images.unsplash.com/photo-1618329027054-0d4cf29d97e6",
     ],
     stock: 87,
@@ -2614,8 +2600,8 @@ export const catalog = [
     description:
       "Three precision-cut brass webcam sliders. Ultra-thin so they don't interfere with closing your laptop. Two come with low-residue adhesive; one is magnet-mount for compatible MacBooks.",
     images: [
-      "https://images.unsplash.com/photo-1616161560417-2b3dd9d4ae4a",
-      "https://images.unsplash.com/photo-1588693363434-03462c39e4c1",
+      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8",
+      "https://images.unsplash.com/photo-1683322499436-f4383dd59f5a",
     ],
     stock: 210,
     reviewCount: 0,
@@ -2630,8 +2616,8 @@ export const catalog = [
     description:
       "A micro-louver privacy filter that blacks out your screen beyond 60 degrees to either side. Attaches via four adhesive tabs or the included magnetic clips — no residue on the screen either way. Anti-glare coating.",
     images: [
-      "https://images.unsplash.com/photo-1593642532559-2b1e33a14a7e",
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
+      "https://images.unsplash.com/photo-1594915440248-1e419eba6611",
+      "https://images.unsplash.com/photo-1691435828932-911a7801adfb",
     ],
     stock: 74,
     reviewCount: 29,
@@ -2646,8 +2632,8 @@ export const catalog = [
     description:
       "Ten neoprene cable sleeves in three diameters: 1/4 inch for USB cables, 1/2 inch for power cords, and 1 inch for cable bundles. Cut to any length with scissors. Velcro closures on the long axis for easy in-and-out.",
     images: [
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+      "https://images.unsplash.com/photo-1698668975271-2ba9a323be6b",
+      "https://images.unsplash.com/photo-1591808216268-ce0b82787efe",
     ],
     stock: 148,
     reviewCount: 18,
@@ -2662,8 +2648,8 @@ export const catalog = [
     description:
       "A USB-C to RJ45 Gigabit Ethernet adapter in brushed aluminum that matches most modern laptops. Plug-and-play on macOS, Windows, and Linux. No drivers, no setup. Full gigabit speeds.",
     images: [
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
+      "https://images.unsplash.com/photo-1624965439943-09e0238644e2",
+      "https://images.unsplash.com/photo-1554098415-4052459dc340",
     ],
     stock: 116,
     reviewCount: 43,
@@ -2677,8 +2663,8 @@ export const catalog = [
     preview: "FIDO2 / WebAuthn. USB-A + NFC. Works with all major platforms.",
     description: "A FIDO2 hardware security key with USB-A and NFC support. Use it as a second factor for email, GitHub, banking, and any WebAuthn-compatible service. The aluminum casing is drilled for a keyring.",
     images: [
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+      "https://images.unsplash.com/photo-1546124404-9e7e3cac2ec1",
+      "https://images.unsplash.com/photo-1528845922818-cc5462be9a63",
     ],
     stock: 74,
     reviewCount: 38,
@@ -2692,8 +2678,8 @@ export const catalog = [
     preview: "WiFi 6. Tri-band. Covers 2,500 sq ft. WPA3.",
     description: "A tri-band WiFi 6 mesh router covering up to 2,500 square feet. WPA3 security, 4× Gigabit LAN ports, a dedicated 5 GHz backhaul band, and automatic firmware updates. Pairs with additional nodes sold separately.",
     images: [
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+      "https://images.unsplash.com/photo-1548544027-1a96c4c24c7a",
+      "https://images.unsplash.com/photo-1531668383211-64743e924c66",
     ],
     stock: 22,
     reviewCount: 47,
@@ -2707,8 +2693,8 @@ export const catalog = [
     preview: "5× Gigabit ports. Plug-and-play. Steel housing. No config.",
     description: "A five-port unmanaged Gigabit switch in a steel housing. Plug any five Ethernet devices in and it works — no configuration, no app, no login. Green Ethernet mode reduces power draw on idle ports.",
     images: [
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
+      "https://images.unsplash.com/photo-1682559736721-c2e77ff4c650",
+      "https://images.unsplash.com/photo-1663932210347-164a05ed0ccd",
     ],
     stock: 88,
     reviewCount: 29,
@@ -2722,8 +2708,8 @@ export const catalog = [
     preview: "10 ft braided nylon. 40 Gbps. Shielded. Gold-plated RJ45.",
     description: "A 10-foot Cat-8 Ethernet cable in braided nylon with shielded gold-plated RJ45 connectors. Rated for 40 Gbps at 2000 MHz. The braid keeps it from tangling and looks presentable on a desk.",
     images: [
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
+      "https://images.unsplash.com/photo-1574405345169-f45c7d66480e",
+      "https://images.unsplash.com/photo-1623949556303-b0d17d198863",
     ],
     stock: 143,
     reviewCount: 21,
@@ -2737,8 +2723,8 @@ export const catalog = [
     preview: "Blocks data pins. Power only. USB-A. Public charging safe.",
     description: "Four USB-A data blockers that allow power to pass while physically disconnecting the data pins. Use them in airport, hotel, and café charging ports to prevent juice-jacking. Fits on a keychain.",
     images: [
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
-      "https://images.unsplash.com/photo-1615526675259-025a6691f3a4",
+      "https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b",
+      "https://images.unsplash.com/photo-1590769398823-a62d7ecc25e6",
     ],
     stock: 196,
     reviewCount: 16,
@@ -2752,8 +2738,8 @@ export const catalog = [
     preview: "Nano-slot + universal adapter. 6 ft steel cable. 4-digit combo.",
     description: "A 6-foot braided steel cable lock with a nano-slot connector and a universal adapter for non-slot laptops. Four-digit combination, no key to lose. Locks to a desk leg, radiator, or security bracket.",
     images: [
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
+      "https://images.unsplash.com/photo-1614588876378-b2ffa4520c22",
+      "https://images.unsplash.com/photo-1651169610763-fddf392fadb4",
     ],
     stock: 67,
     reviewCount: 11,
@@ -2767,8 +2753,8 @@ export const catalog = [
     preview: "10 outlets, 4 USB-A, 2 USB-C. 4320J surge protection.",
     description: "A 10-outlet surge protector with 4320 joules of surge suppression, four USB-A ports, and two USB-C ports at 30W each. The outlets are rotationally spaced to fit large adapters without blocking neighbors.",
     images: [
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
+      "https://images.unsplash.com/photo-1622750342107-4b60e2704157",
+      "https://images.unsplash.com/photo-1636569826709-8e07f6104992",
     ],
     stock: 54,
     reviewCount: 62,
@@ -2782,8 +2768,8 @@ export const catalog = [
     preview: "OpenVPN + WireGuard. WiFi 5. Works on hotel ethernet. Pocket-size.",
     description: "A pocket-size travel router that connects to hotel ethernet or WiFi and creates a private encrypted tunnel for all your devices. Supports OpenVPN and WireGuard protocols. 300 Mbps WiFi 5, USB-C powered.",
     images: [
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
-      "https://images.unsplash.com/photo-1591035897819-f4bdf739f446",
+      "https://images.unsplash.com/photo-1629429407756-446d66f5b24e",
+      "https://images.unsplash.com/photo-1566476927456-446189d7b1ca",
     ],
     stock: 31,
     reviewCount: 24,
@@ -2797,8 +2783,8 @@ export const catalog = [
     preview: "HDMI 2.1. 48 Gbps. 4K@120Hz, 8K@60Hz. Braided nylon.",
     description: "A 6-foot HDMI 2.1 cable in braided nylon with gold-plated connectors. Full 48 Gbps bandwidth — 4K at 120Hz, 8K at 60Hz, VRR. Works with gaming consoles, monitors, and AV receivers.",
     images: [
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761",
-      "https://images.unsplash.com/photo-1583863788434-e62bd5d6f2e7",
+      "https://images.unsplash.com/photo-1613398773682-9e272a85f203",
+      "https://images.unsplash.com/photo-1610664934028-b0d1fc08608e",
     ],
     stock: 162,
     reviewCount: 34,
@@ -2812,8 +2798,8 @@ export const catalog = [
     preview: "60° privacy angle. Anti-glare. 13\", 14\", 15\", 16\" available.",
     description: "A micro-louver film that restricts screen visibility to 60 degrees. Anti-glare coating reduces reflections. Attaches with four corner tabs that leave no residue.",
     images: [
-      "https://images.unsplash.com/photo-1593642532559-2b1e33a14a7e",
-      "https://images.unsplash.com/photo-1484788984921-03950022c9ef",
+      "https://images.unsplash.com/photo-1762681290673-ba1ad4ea0875",
+      "https://images.unsplash.com/photo-1538844816599-5fce5717b7e6",
     ],
     stock: 58,
     reviewCount: 31,
@@ -2827,8 +2813,8 @@ export const catalog = [
     preview: "Full-grain leather. RFID-blocking lining. Holds 8 cards.",
     description: "A slim card wallet in full-grain leather with an RFID-blocking inner lining that prevents contactless skimming. Holds eight cards and two folded bills. Fits flat in a front pocket. The leather develops a patina with use.",
     images: [
-      "https://images.unsplash.com/photo-1591086427040-5e70f3b57bf1",
-      "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93",
+      "https://images.unsplash.com/photo-1723187939911-cb1a229e5adb",
+      "https://images.unsplash.com/photo-1585610024909-aa885728c7c1",
     ],
     stock: 82,
     reviewCount: 14,

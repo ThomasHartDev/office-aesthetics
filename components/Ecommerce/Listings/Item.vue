@@ -1,7 +1,6 @@
 <template>
   <div
     class="product-card"
-    v-if="!loading"
     @pointerdown.capture="handlePointerDown"
     @click.capture="swallowClick"
     @mouseenter="handleMouseEnter"
@@ -130,7 +129,6 @@ const showLoginModal = ref(false);
 const itemStore = useItemStore();
 const userStore = useUserStore();
 const router = useRouter();
-const loading = ref(true);
 
 const { $fbq } = useNuxtApp();
 const { $klaviyo } = useNuxtApp();
@@ -189,10 +187,6 @@ function handleClickOutside(event) {
     });
   }
 }
-
-onMounted(() => {
-  loading.value = false;
-});
 
 // clean up on unmount just in case
 onUnmounted(() => {
