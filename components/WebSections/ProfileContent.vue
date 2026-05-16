@@ -123,8 +123,8 @@ const sectionLabel = computed(() => sectionLabels[props.currentSection] || "Prof
 .content {
   flex: 1;
   padding: 2rem;
-  max-width: 960px;
   width: 100%;
+  min-width: 0;
 }
 
 .placeholder-section {
