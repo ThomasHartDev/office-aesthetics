@@ -13,6 +13,11 @@
         :src="imgSrc(item.image)"
         alt="Product Image"
         class="product-image"
+        loading="lazy"
+        decoding="async"
+        width="600"
+        height="600"
+        sizes="sm:50vw md:33vw lg:300px"
       />
 
       <!-- Sale Ribbon -->

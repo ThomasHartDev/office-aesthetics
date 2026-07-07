@@ -23,6 +23,19 @@
 </template>
 
 <script setup>
+// The hero background is a CSS background-image (discovered late), which is the
+// LCP element. Preload it at high priority so it starts fetching immediately.
+useHead({
+  link: [
+    {
+      rel: "preload",
+      as: "image",
+      href: "/Backgrounds/OAIntroBG.webp",
+      fetchpriority: "high",
+    },
+  ],
+});
+
 const glowCanvas = ref(null);
 let mousePos = { x: 0, y: 0 };
 
