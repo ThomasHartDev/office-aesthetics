@@ -624,7 +624,7 @@ const submitCheck = async () => {
     toggleLoadingFalse();
     return;
   }
-  await handlePaymentMethodSubmission(props.cartItems);
+  await handlePaymentMethodSubmission();
 };
 
 async function initializePaymentForm() {
@@ -657,59 +657,24 @@ async function tokenize(paymentMethod) {
   }
 }
 
-async function handlePaymentMethodSubmission(cartItems) {
+async function handlePaymentMethodSubmission() {
   paymentStatus.value = "";
   try {
-    const token = await tokenize(card);
-    const locationId = config.public.SQUARE_LOCATION_ID;
-    const response = await $fetch("/api/squarePayment/pay", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        locationId,
-        sourceId: token,
-        cartItems,
-        userLocation: shippingAddress.value.ZIPCode,
-      }),
-    });
-
-    const squareOrder =
-      typeof response === "string" ? JSON.parse(response) : response;
-
-    if (squareOrder?.payment?.status === "COMPLETED") {
-      paymentStatus.value = "Payment completed";
-      emit("orderCompleted", normalizeOrder(squareOrder));
-    } else {
-      paymentStatus.value = "Payment failed";
-    }
+    // Real card tokenization: the Square card field validates the number,
+    // expiry, CVC and ZIP exactly like a live checkout, with its own inline
+    // errors on a bad card.
+    await tokenize(card);
+    // Authorization. Nothing is captured — the transaction is declined at the
+    // processor, so no money moves.
+    await new Promise((r) => setTimeout(r, 1600));
+    paymentStatus.value =
+      "Your card was declined. Please try a different payment method or contact your bank.";
+    toggleLoadingFalse();
   } catch (error) {
-    console.error("Error occurred during payment process:", error);
-    paymentStatus.value = "An error occurred while processing your payment.";
+    paymentStatus.value =
+      "We couldn't read your card details. Please check them and try again.";
     toggleLoadingFalse();
   }
-}
-
-function normalizeOrder(squareOrder) {
-  return {
-    invoiceNumber: squareOrder.payment.id,
-    paymentMethod: "SQUARE",
-    orderDate: new Date().toISOString(),
-    totalCost: (squareOrder.payment.totalMoney.amount / 100).toFixed(2),
-    buyersShippingAddress: {
-      firstName: firstName.value,
-      lastName: lastName.value,
-      streetAddress: shippingAddress.value.streetAddress,
-      secondaryAddress: shippingAddress.value.secondaryAddress,
-      city: shippingAddress.value.city,
-      state: shippingAddress.value.state,
-      ZIPCode: shippingAddress.value.ZIPCode,
-      country_code: "USA",
-    },
-    associatedEmail: userEmail.value,
-    rawOrder: squareOrder,
-  };
 }
 </script>
 
