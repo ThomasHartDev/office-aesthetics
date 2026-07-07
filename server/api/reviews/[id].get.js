@@ -1,21 +1,17 @@
-import Review from '~/server/models/Review.js';
-import { connectDB } from '~/server/utils/dbConnect';
-import { disconnectDB } from '~/server/utils/dbDisconnect';
+import { getPool, rowToReview } from "~/server/utils/pg";
 
+// Reviews for one item, most-helpful then newest first, from Postgres.
 export default defineEventHandler(async (event) => {
+  const { id } = event.context.params;
   try {
-    // Retrieve the item id from the route params.
-    const { id } = event.context.params;
-    
-    await connectDB(); // Establish the DB connection
-    // Find reviews that match the provided itemId.
-    const reviews = await Review.find({ itemId: id });
-    await disconnectDB(); // Close the DB connection
-    
-    return reviews;
+    if (!/^\d+$/.test(id)) return [];
+    const { rows } = await getPool().query(
+      "SELECT * FROM reviews WHERE item_id = $1 ORDER BY thumbs_up DESC, created_at DESC",
+      [Number(id)]
+    );
+    return rows.map(rowToReview);
   } catch (error) {
-    console.error('Error fetching reviews for item:', error);
-    await disconnectDB();
-    throw createError({ statusCode: 500, message: error.message });
+    console.error("[API] reviews [id]: ", error);
+    throw createError({ statusCode: 500, message: "Server Error" });
   }
 });
