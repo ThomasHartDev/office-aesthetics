@@ -74,7 +74,7 @@
               <div v-if="selectedItem.image" class="product-image-preview">
                 <NuxtImg
                   class="zoomable"
-                  :src="`/ItemPics/${selectedItem.image}`"
+                  :src="imgSrc(selectedItem.image)"
                   alt="Product Image"
                   width="300"
                   height="300"

@@ -366,7 +366,7 @@ function splitText(text) {
   }));
 }
 function getItemImagePath(fileName) {
-  return "/ItemPics/" + fileName;
+  return imgSrc(fileName);
 }
 
 /* -------------------------------

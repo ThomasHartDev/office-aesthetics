@@ -174,7 +174,7 @@ const computedGalleryImage = computed(() => {
 });
 const galleryActiveImage = ref(computedGalleryImage.value);
 watch(computedGalleryImage, (v) => (galleryActiveImage.value = v));
-const getImagePath = (img) => `/ItemPics/${img}`;
+const getImagePath = (img) => imgSrc(img);
 
 const thumbnailContainer = ref(null);
 const scrollPosition = ref(0);

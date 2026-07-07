@@ -15,7 +15,7 @@
           class="recentlyViewedItems-item"
         >
           <div class="image-container" @click="goToItem(item.item)">
-            <img :src="`/ItemPics/${item.image}`" :alt="item.name" />
+            <img :src="imgSrc(item.image)" :alt="item.name" />
             <div class="overlay">
               <p class="item-name">{{ item.name }}</p>
             </div>

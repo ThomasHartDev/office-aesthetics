@@ -21,7 +21,7 @@
             :key="itemIndex"
             class="order-item"
           >
-            <img :src="`/ItemPics/${item.image}`" :alt="`Item ${itemIndex + 1}`" />
+            <img :src="imgSrc(item.image)" :alt="`Item ${itemIndex + 1}`" />
           </div>
           <div v-if="order.itemizedList.length > maxVisibleCounts[index] - 1" class="order-item more">
             <img src="/BlogPics/BlogPic1.webp" alt="More items" />

@@ -8,7 +8,7 @@
     <div v-if="items.length > 0" class="wishlist-grid">
       <div v-for="(item, index) in items" :key="index" class="wishlist-card">
         <div class="card-image" @click="goToItem(item.item)">
-          <img :src="`/ItemPics/${item.image}`" :alt="item.name" />
+          <img :src="imgSrc(item.image)" :alt="item.name" />
           <div class="card-overlay">
             <span class="overlay-label">View item</span>
           </div>
