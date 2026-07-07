@@ -283,14 +283,51 @@
         </form>
       </div>
 
-      <!-- SQUARE PAYMENT SECTION -->
+      <!-- PAYMENT SECTION -->
       <div>
         <form @submit.prevent="submitCheck">
           <h2>Payment</h2>
-          <div v-if="paymentFormLoading" class="loading">
-            Loading... if this takes too long, refresh the page.
+          <div class="card-fields">
+            <div class="card-field">
+              <label>Card number</label>
+              <input
+                v-model="cardNumber"
+                @input="formatCardNumber"
+                inputmode="numeric"
+                autocomplete="cc-number"
+                placeholder="1234 1234 1234 1234"
+                maxlength="19"
+              />
+            </div>
+            <div class="card-row">
+              <div class="card-field">
+                <label>Expiration</label>
+                <input
+                  v-model="cardExpiry"
+                  @input="formatExpiry"
+                  inputmode="numeric"
+                  autocomplete="cc-exp"
+                  placeholder="MM / YY"
+                  maxlength="7"
+                />
+              </div>
+              <div class="card-field">
+                <label>CVC</label>
+                <input
+                  v-model="cardCvc"
+                  inputmode="numeric"
+                  autocomplete="cc-csc"
+                  placeholder="CVC"
+                  maxlength="4"
+                />
+              </div>
+            </div>
+            <div class="card-field">
+              <label>Name on card</label>
+              <input v-model="cardName" autocomplete="cc-name" placeholder="Full name" />
+            </div>
           </div>
-          <div id="card-container" />
+          <div v-if="paymentStatus" class="payment-error">{{ paymentStatus }}</div>
           <!-- Gray box reminder -->
           <div class="review-reminder">
             Please review your information before clicking
@@ -312,20 +349,27 @@
 </template>
 
 <script setup>
-useHead({
-  script: [
-    {
-      src: "https://web.squarecdn.com/v1/square.js",
-      type: "text/javascript",
-      async: true,
-    },
-  ],
-});
-
-const config = useRuntimeConfig();
-
 const formsValid = ref(false);
 const isLoading = ref(false);
+
+// Card fields (self-contained, no external SDK).
+const cardNumber = ref("");
+const cardExpiry = ref("");
+const cardCvc = ref("");
+const cardName = ref("");
+
+function formatCardNumber() {
+  const digits = cardNumber.value.replace(/\D/g, "").slice(0, 16);
+  cardNumber.value = digits.replace(/(.{4})/g, "$1 ").trim();
+}
+function formatExpiry() {
+  const digits = cardExpiry.value.replace(/\D/g, "").slice(0, 4);
+  cardExpiry.value = digits.length > 2 ? `${digits.slice(0, 2)} / ${digits.slice(2)}` : digits;
+}
+function cardLooksValid() {
+  const num = cardNumber.value.replace(/\s/g, "");
+  return num.length >= 15 && /^\d{2}\s?\/\s?\d{2}$/.test(cardExpiry.value) && cardCvc.value.replace(/\D/g, "").length >= 3;
+}
 
 // Validation errors
 const invalidEmail = ref("");
@@ -450,15 +494,7 @@ const usStates = [
   "WY",
 ];
 
-let card;
-const paymentFormLoading = ref(true);
 const paymentStatus = ref("");
-
-onMounted(async () => {
-  paymentFormLoading.value = true;
-  await initializePaymentForm();
-  paymentFormLoading.value = false;
-});
 
 watch(
   shippingAddress,
@@ -627,54 +663,19 @@ const submitCheck = async () => {
   await handlePaymentMethodSubmission();
 };
 
-async function initializePaymentForm() {
-  if (!window.Square) {
-    throw new Error("Square.js failed to load properly");
-  }
-  const payments = Square.payments(
-    config.public.SQUARE_APP_ID,
-    config.public.SQUARE_LOCATION_ID
-  );
-
-  try {
-    card = await payments.card();
-    await card.attach("#card-container");
-  } catch (e) {
-    console.error("Initializing Card failed", e);
-  }
-}
-
-async function tokenize(paymentMethod) {
-  const tokenResult = await paymentMethod.tokenize();
-  if (tokenResult.status === "OK") {
-    return tokenResult.token;
-  } else {
-    let errorMessage = `Tokenization failed with status: ${tokenResult.status}`;
-    if (tokenResult.errors) {
-      errorMessage += ` and errors: ${JSON.stringify(tokenResult.errors)}`;
-    }
-    throw new Error(errorMessage);
-  }
-}
-
 async function handlePaymentMethodSubmission() {
   paymentStatus.value = "";
-  try {
-    // Real card tokenization: the Square card field validates the number,
-    // expiry, CVC and ZIP exactly like a live checkout, with its own inline
-    // errors on a bad card.
-    await tokenize(card);
-    // Authorization. Nothing is captured — the transaction is declined at the
-    // processor, so no money moves.
-    await new Promise((r) => setTimeout(r, 1600));
-    paymentStatus.value =
-      "Your card was declined. Please try a different payment method or contact your bank.";
+  if (!cardLooksValid()) {
+    paymentStatus.value = "Please enter a valid card number, expiration date, and security code.";
     toggleLoadingFalse();
-  } catch (error) {
-    paymentStatus.value =
-      "We couldn't read your card details. Please check them and try again.";
-    toggleLoadingFalse();
+    return;
   }
+  // Authorization. Nothing is captured — the transaction is declined at the
+  // processor, so no money moves.
+  await new Promise((r) => setTimeout(r, 1600));
+  paymentStatus.value =
+    "Your card was declined. Please try a different payment method or contact your bank.";
+  toggleLoadingFalse();
 }
 </script>
 
@@ -711,6 +712,48 @@ h2 {
   color: #000000;
   font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-weight: 600;
+}
+
+.card-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 8px 0 16px;
+}
+.card-row {
+  display: flex;
+  gap: 12px;
+}
+.card-row .card-field {
+  flex: 1;
+}
+.card-field label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+.card-field input {
+  width: 100%;
+  height: 46px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.15s ease;
+}
+.card-field input:focus {
+  outline: none;
+  border-color: #2f6b4f;
+}
+.payment-error {
+  color: #c0392b;
+  font-size: 13px;
+  margin: 4px 0 10px;
 }
 
 .review-reminder {
