@@ -105,29 +105,14 @@
             <!-- Left: Express Checkout Section -->
             <div class="checkout-left">
               <div class="left-wrapper">
-                <h3 class="express-label">Express Checkout</h3>
-                <div class="express-checkout-wrapper">
-                  <div class="express-buttons-container">
-                    <div class="express-button paypal">
-                      <EcommerceExpressCheckoutPaypalCheckout
-                        :totalAmount="totalPrice"
-                        @orderCompleted="handleOrderCompleted"
-                      />
-                    </div>
-                    <!-- Additional express checkout methods can be added here -->
-                  </div>
-                  <div class="payment-divider">
-                    <span>OR</span>
-                  </div>
-                  <div class="manual-checkout-wrapper">
-                    <EcommerceCheckoutForm
-                      :totalAmount="totalPrice"
-                      :cartItems="activeCart"
-                      @orderCompleted="handleOrderCompleted"
-                      @stateChanged="handleStateChanged"
-                      @zipCodeChanged="handleZIPCodeChanged"
-                    />
-                  </div>
+                <div class="manual-checkout-wrapper">
+                  <EcommerceCheckoutForm
+                    :totalAmount="totalPrice"
+                    :cartItems="activeCart"
+                    @orderCompleted="handleOrderCompleted"
+                    @stateChanged="handleStateChanged"
+                    @zipCodeChanged="handleZIPCodeChanged"
+                  />
                 </div>
               </div>
             </div>
