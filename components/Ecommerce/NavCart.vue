@@ -105,7 +105,31 @@
             <!-- Left: Express Checkout Section -->
             <div class="checkout-left">
               <div class="left-wrapper">
-                <div class="manual-checkout-wrapper">
+                <!-- Wireframe skeleton while the form paints -->
+                <div v-if="checkoutLoading" class="checkout-skeleton" aria-hidden="true">
+                  <div class="sk-line sk-h2"></div>
+                  <div class="sk-line sk-field"></div>
+                  <div class="sk-line sk-field"></div>
+                  <div class="sk-line sk-h2 sk-mt"></div>
+                  <div class="sk-row">
+                    <div class="sk-line sk-field"></div>
+                    <div class="sk-line sk-field"></div>
+                  </div>
+                  <div class="sk-line sk-field"></div>
+                  <div class="sk-row">
+                    <div class="sk-line sk-field"></div>
+                    <div class="sk-line sk-field sk-narrow"></div>
+                    <div class="sk-line sk-field sk-narrow"></div>
+                  </div>
+                  <div class="sk-line sk-h2 sk-mt"></div>
+                  <div class="sk-line sk-field"></div>
+                  <div class="sk-row">
+                    <div class="sk-line sk-field"></div>
+                    <div class="sk-line sk-field sk-narrow"></div>
+                  </div>
+                  <div class="sk-line sk-btn"></div>
+                </div>
+                <div v-show="!checkoutLoading" class="manual-checkout-wrapper">
                   <EcommerceCheckoutForm
                     :totalAmount="totalPrice"
                     :cartItems="activeCart"
@@ -294,12 +318,19 @@ function setTab(tab) {
 
 // Toggle between cart view and checkout panel view
 const showCheckout = ref(false);
+const checkoutLoading = ref(false);
+let checkoutTimer = null;
 function openCheckout() {
-  console.log("Opening checkout panel");
   showCheckout.value = true;
+  // Show a wireframe skeleton while the checkout form mounts and its fields
+  // paint, so the left panel never flashes empty or half-rendered.
+  checkoutLoading.value = true;
+  if (checkoutTimer) clearTimeout(checkoutTimer);
+  checkoutTimer = setTimeout(() => {
+    checkoutLoading.value = false;
+  }, 650);
 }
 function closeCheckout() {
-  console.log("Closing checkout panel");
   showCheckout.value = false;
 }
 
@@ -704,6 +735,53 @@ async function handleOrderCompleted(orderData) {
   width: 100%;
   max-width: 550px;
 }
+
+/* Checkout wireframe skeleton */
+.checkout-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.checkout-skeleton .sk-row {
+  display: flex;
+  gap: 12px;
+}
+.checkout-skeleton .sk-row .sk-field {
+  flex: 1;
+}
+.checkout-skeleton .sk-narrow {
+  max-width: 90px;
+}
+.sk-line {
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ececec 25%, #f6f6f6 37%, #ececec 63%);
+  background-size: 400% 100%;
+  animation: sk-shimmer 1.3s ease infinite;
+}
+.sk-h2 {
+  height: 20px;
+  width: 40%;
+}
+.sk-field {
+  height: 46px;
+  width: 100%;
+}
+.sk-btn {
+  height: 52px;
+  width: 100%;
+  margin-top: 6px;
+  background: linear-gradient(90deg, #dfe7e2 25%, #eef3f0 37%, #dfe7e2 63%);
+  background-size: 400% 100%;
+  animation: sk-shimmer 1.3s ease infinite;
+}
+.sk-mt {
+  margin-top: 10px;
+}
+@keyframes sk-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
 /* Divider between sections */
 .checkout-divider {
   width: 1px;

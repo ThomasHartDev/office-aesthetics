@@ -44,3 +44,18 @@ export function rowToItem(row) {
   }
   return item;
 }
+
+// Map a `reviews` row to the review shape the frontend renders.
+export function rowToReview(row) {
+  return {
+    _id: String(row.id),
+    itemId: String(row.item_id),
+    reviewerName: row.reviewer_name,
+    title: row.title || "",
+    comment: row.comment || "",
+    rating: row.rating,
+    helpful: { thumbsUp: row.thumbs_up ?? 0, thumbsDown: row.thumbs_down ?? 0 },
+    photos: [],
+    date: row.created_at,
+  };
+}
