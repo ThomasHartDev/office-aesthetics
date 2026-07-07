@@ -10,7 +10,7 @@
     <div class="image-container">
       <!-- Product Image -->
       <NuxtImg
-        :src="'/ItemPics/' + item.image"
+        :src="imgSrc(item.image)"
         alt="Product Image"
         class="product-image"
       />

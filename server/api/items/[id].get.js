@@ -1,25 +1,23 @@
-import Item from '~/server/models/Item.js';
-import mongoose from 'mongoose';
-import { connectDB } from '~/server/utils/dbConnect';
-import { disconnectDB } from '~/server/utils/dbDisconnect';
+import { getPool, rowToItem } from "~/server/utils/pg";
 
+// A single item by numeric id or slug, from Postgres.
 export default defineEventHandler(async (event) => {
   const { id } = event.context.params;
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw createError({ statusCode: 404, message: 'Item not found' });
-  }
-  await connectDB();
   try {
-    const item = await Item.findById(id);
-    await disconnectDB();
-    if (!item) {
-      throw createError({ statusCode: 404, message: 'Item not found' });
+    const byId = /^\d+$/.test(id);
+    const { rows } = await getPool().query(
+      byId
+        ? "SELECT * FROM products WHERE id = $1"
+        : "SELECT * FROM products WHERE slug = $1",
+      [byId ? Number(id) : id]
+    );
+    if (!rows.length) {
+      throw createError({ statusCode: 404, message: "Item not found" });
     }
-    return item;
+    return rowToItem(rows[0]);
   } catch (error) {
-    await disconnectDB();
     if (error.statusCode) throw error;
-    console.error("[API] [id].get.js: Error fetching item:", error);
-    throw createError({ statusCode: 500, message: 'Server Error' });
+    console.error("[API] item [id]: ", error);
+    throw createError({ statusCode: 500, message: "Server Error" });
   }
 });

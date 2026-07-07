@@ -66,6 +66,7 @@ export default defineNuxtConfig({
     private: {
       // Database
       DB_URI: process.env.DB_URI,
+      DATABASE_URL: process.env.DATABASE_URL,
 
       // USPS
       USPS_CLIENT_SECRET: process.env.USPS_CLIENT_SECRET,

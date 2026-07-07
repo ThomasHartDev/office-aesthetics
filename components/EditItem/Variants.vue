@@ -12,7 +12,7 @@
         <div class="variant-preview">
           <NuxtImg
             v-if="variant.image"
-            :src="`/ItemPics/${variant.image}`"
+            :src="imgSrc(variant.image)"
             alt="Variant Image"
             width="80"
             height="80"

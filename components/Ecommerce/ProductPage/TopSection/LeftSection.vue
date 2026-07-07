@@ -83,7 +83,7 @@ const baseImage = computed(
     "default.webp"
 );
 const activeImage = ref(baseImage.value);
-const getImagePath = (img) => `/ItemPics/${img}`;
+const getImagePath = (img) => imgSrc(img);
 
 // thumbnails scroll
 const thumbs = ref(null);

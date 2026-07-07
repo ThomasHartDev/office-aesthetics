@@ -45,7 +45,7 @@
           <h2 class="bot-margin">Items Ordered</h2>
           <ul>
             <li v-for="(item, index) in order.itemizedList" :key="index">
-              <img :src="`/ItemPics/${item.image}`" alt="Item Image" />
+              <img :src="imgSrc(item.image)" alt="Item Image" />
               <div>
                 <p><strong>Name:</strong> {{ item.name }}</p>
                 <p><strong>Quantity:</strong> {{ item.quantity }}</p>

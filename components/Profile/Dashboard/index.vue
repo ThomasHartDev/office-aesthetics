@@ -57,7 +57,7 @@
             <img
               v-for="(item, i) in order.itemizedList.slice(0, 3)"
               :key="i"
-              :src="`/ItemPics/${item.image}`"
+              :src="imgSrc(item.image)"
               :alt="item.name"
               class="order-thumb"
             />
@@ -90,7 +90,7 @@
           class="wishlist-thumb"
           @click="$router.push(`/item/${item.item}`)"
         >
-          <img :src="`/ItemPics/${item.image}`" :alt="item.name" />
+          <img :src="imgSrc(item.image)" :alt="item.name" />
         </div>
       </div>
     </div>

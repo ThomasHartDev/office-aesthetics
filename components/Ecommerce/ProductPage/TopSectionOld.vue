@@ -281,7 +281,7 @@ const galleryActiveImage = ref(computedGalleryImage.value);
 watch(computedGalleryImage, (newVal) => {
   galleryActiveImage.value = newVal;
 });
-const getImagePath = (img) => `/ItemPics/${img || ""}`;
+const getImagePath = (img) => imgSrc(img);
 
 const thumbnailContainer = ref(null);
 const scrollPosition = ref(0);

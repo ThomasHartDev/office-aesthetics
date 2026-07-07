@@ -23,7 +23,7 @@
               class="cart-item"
             >
               <NuxtImg
-                :src="`/ItemPics/${item.image}`"
+                :src="imgSrc(item.image)"
                 alt="item image"
                 class="item-image"
               />
@@ -270,7 +270,7 @@ onUnmounted(() => {
 
 watch(activeCart, fetchCartTotal, { deep: true });
 
-const resolvedItemImg = (img) => `/ItemPics/${img}`;
+const resolvedItemImg = (img) => imgSrc(img);
 
 const removeCartItem = (itemId, variantId) => {
   if (isLoggedIn.value) {
