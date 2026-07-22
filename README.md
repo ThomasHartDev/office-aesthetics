@@ -1,102 +1,73 @@
-# Office Aestheticas Ecommerce Platform
+# Office Aestheticas
 
-**Live demo:** https://aestheticas.com
+An ecommerce store for home office furniture and gear. Product pages with variants and filtering, a cart and checkout, multiple payment methods, user accounts, marketing integrations, and a full admin console.
+
+**Live site:** https://aestheticas.com
 
 ## Overview
 
-Office Aestheticas is a fully‑featured ecommerce store built for any number of products and complex variants. With Nuxt 3 SSR, it achieves Google Lighthouse scores of 100 across all metrics and ~1 s load times. Key features include product pages with filtering, reviews, optimized cart/checkout UI, responsive design, email & Google login, user profiles (orders, wishlists, support tickets), PayPal & Square payments, Klaviyo & Meta Pixel/Conversions API for marketing, and an admin console for managing blogs, products, users, orders, reviews, tickets, bundles, and affiliates.
+Office Aestheticas is a Nuxt 3 storefront with server-side rendering. Shoppers browse products with variant selection and filtering, read and leave reviews, and check out with PayPal, Square, or Amazon Pay. Accounts carry order history, wishlists, recently viewed items, and support tickets. Marketing runs through Klaviyo email flows and Meta Pixel plus the Conversions API. An admin console manages products, orders, blogs, reviews, bundles, affiliates, and users.
 
-## Tech Stack
+## Features
 
-- Frontend: Nuxt 3 (Vue 3 SSR), Pinia  
-- Backend & API: Node.js, Nuxt Server Routes, Mongoose, MongoDB Atlas  
-- Storage: AWS S3 via @aws-sdk/client‑s3  
-- Payments: PayPal JS SDK, Square SDK  
-- Marketing: Klaviyo API, Meta Pixel & Conversions API  
-- Auth & Security: JWT, bcrypt, Google OAuth, reCAPTCHA v3  
-- DevOps: Vercel (CI/CD), GitHub  
+- Product pages with variant handling and filtering
+- Reviews and ratings, charted with Chart.js
+- Cart and checkout with PayPal, Square, and Amazon Pay
+- Email/password and Google sign-in
+- Accounts: orders, wishlists, recently viewed, support tickets
+- Klaviyo email flows and waitlist, Meta Pixel and Conversions API tracking
+- AWS S3 for assets, AWS SES and Nodemailer/MJML for transactional email
+- Admin console for products, orders, blogs, reviews, bundles, affiliates, and users
+- SSR for fast first paint and search indexing
+- Auto-deploy on push to `main`
 
-## Key Features
+## Stack
 
-- SSR for speed & SEO  
-- Modular, auto‑imported components  
-- Complex variant handling & filtering  
-- Reviews, ratings & charts (Chart.js)  
-- Optimized cart & checkout UI  
-- Responsive, WCAG‑compliant design  
-- Email/password & Google Sign‑In  
-- User profiles: orders, wishlists, support tickets  
-- PayPal & Square Payment methods  
-- Klaviyo waitlist & email flows  
-- Meta Pixel & Conversions API tracking  
-- Admin console for:
-    - Blogs (CRUD)
-    - Products & variants
-    - User management
-    - Order & fulfillment
-    - Review moderation
-    - Support tickets
-    - Bundles & affiliates
-- 100 Lighthouse scores, ~1 s load times
+- Nuxt 3 (Vue 3, SSR), Pinia for state
+- Nuxt server routes for the API
+- MongoDB Atlas via Mongoose, plus `pg`
+- AWS S3 and SES (`@aws-sdk/client-s3`, `@aws-sdk/client-ses`)
+- Payments: PayPal JS SDK, Square SDK, Amazon Pay API SDK
+- Marketing: Klaviyo API, Meta Pixel and Conversions API
+- Auth: Google OAuth, `jsonwebtoken`, `bcrypt`, reCAPTCHA v3
+- Email templating with MJML and Nodemailer
+- Deployed on Vercel
 
-## Getting Started
+## Getting started
 
-### Prerequisites
+```bash
+npm install
+npm run dev
+```
 
-- Node.js v16 or higher  
-- npm, yarn, or pnpm  
-- MongoDB Atlas account  
-- AWS account & S3 bucket  
-- PayPal & Square credentials  
-- Google OAuth credentials  
-- Klaviyo account  
-- Meta Pixel & Conversions API credentials  
+Set the environment variables (MongoDB, AWS, payment providers, Google OAuth, Klaviyo, Meta). The core set:
 
-### Installation & Running Locally
+```
+DB_URI=your_mongodb_connection_string
+S3_BUCKET=your_s3_bucket_name
+AWS_ACCESS_KEY=your_aws_access_key
+AWS_SECRET_KEY=your_aws_secret_key
+AWS_REGION=your_aws_region
+JWT_SECRET=your_jwt_secret
+GOOGLE_CLIENT_ID=your_google_oauth_client_id
+GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
+PAYPAL_CLIENT_ID=your_paypal_client_id
+PAYPAL_CLIENT_SECRET=your_paypal_client_secret
+SQUARE_APP_ID=your_square_application_id
+SQUARE_ACCESS_TOKEN=your_square_access_token
+SQUARE_LOCATION_ID=your_square_location_id
+KLAVIYO_PUBLIC_KEY=your_klaviyo_public_key
+KLAVIYO_PRIVATE_KEY=your_klaviyo_private_key
+META_PIXEL_ID=your_meta_pixel_id
+META_ACCESS_TOKEN=your_meta_conversions_api_access_token
+```
 
-    git clone https://github.com/hartecho/office-aestheticas.git
-    cd office-aestheticas
-    npm install
+Run tests and build:
 
-### Environment Variables
+```bash
+npm run test:unit
+npm run build
+npm run start
+```
 
-    DB_URI=your_mongodb_connection_string
-    S3_BUCKET=your_s3_bucket_name
-    AWS_ACCESS_KEY=your_aws_access_key
-    AWS_SECRET_KEY=your_aws_secret_key
-    AWS_REGION=your_aws_region
-    SQUARE_LOCATION_ID=your_square_location_id
-    SQUARE_APP_ID=your_square_application_id
-    SQUARE_ACCESS_TOKEN=your_square_access_token
-    PAYPAL_CLIENT_ID=your_paypal_client_id
-    PAYPAL_CLIENT_SECRET=your_paypal_client_secret
-    JWT_SECRET=your_jwt_secret
-    GOOGLE_CLIENT_ID=your_google_oauth_client_id
-    GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
-    KLAVIYO_PUBLIC_KEY=your_klaviyo_public_key
-    KLAVIYO_PRIVATE_KEY=your_klaviyo_private_key
-    KLAVIYO_WAITLIST_ID=your_klaviyo_waitlist_list_id
-    META_PIXEL_ID=your_meta_pixel_id
-    META_ACCESS_TOKEN=your_meta_conversions_api_access_token
-
-### Local Development
-
-    npm run dev
-
-### Build & Production
-
-    npm run build
-    npm run start
-
-## Deployment
-
-Connected to Vercel: pushes to `main` auto‑deploy to https://aestheticas.com
-
-## License
-
-© 2025 HARTECHO LLC. All rights reserved.
-
-## Contact
-
-Thomas Hart  
-Email: thomas@hartecho.com  
+Built by HARTECHO.
