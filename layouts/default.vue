@@ -1,5 +1,6 @@
 <template>
   <div>
+    <a href="#main" class="skip-link">Skip to content</a>
     <NavFooterPreloadOANav
       @toggle-cart="toggleCartVisibility"
       @toggle-mobile-nav="toggleMobileNav"
@@ -33,7 +34,7 @@
       />
     </transition>
 
-    <div>
+    <div id="main">
       <slot />
     </div>
 
@@ -184,4 +185,8 @@ onUnmounted(() => {
   box-shadow: none !important;
   border-bottom: 1px solid #e5e7eb;
 }
+</style>
+<style>
+.skip-link { position: absolute; left: -9999px; z-index: 100; }
+.skip-link:focus { left: 1rem; top: 1rem; background: #fff; color: #000; padding: 0.5rem 0.75rem; }
 </style>
