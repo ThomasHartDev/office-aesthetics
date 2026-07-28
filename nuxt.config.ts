@@ -122,6 +122,11 @@ export default defineNuxtConfig({
       SQUARE_LOCATION_ID: process.env.SQUARE_LOCATION_ID,
       TEST_SQUARE_APP_ID: process.env.TEST_SQUARE_APP_ID,
       SQUARE_APP_ID: process.env.SQUARE_APP_ID,
+
+      // PostHog (Thomas network analytics — ships dark until key is set)
+      NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+      NEXT_PUBLIC_POSTHOG_HOST:
+        process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
     }
   },
 
