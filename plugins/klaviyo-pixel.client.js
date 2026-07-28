@@ -11,6 +11,22 @@ export default defineNuxtPlugin((nuxtApp) => {
   };
 
   if (process.client) {
+    // Compliance: optional marketing pixels only after consent.
+    // Set localStorage.optional_cookies = '1' via cookie prefs / future banner.
+    try {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('optional_cookies') !== '1') {
+        nuxtApp.provide('klaviyo', (..._a) => {});
+        nuxtApp.provide('klaviyoClientApi', {
+          subscribe: () => Promise.resolve(),
+          trackEvent: () => Promise.resolve(),
+          updateProfile: () => Promise.resolve(),
+        });
+        return;
+      }
+    } catch (_e) {
+      return;
+    }
+
     useHead({
       link: [
         { rel: 'preconnect', href: 'https://static.klaviyo.com' },
