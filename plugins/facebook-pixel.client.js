@@ -1,4 +1,13 @@
 export default defineNuxtPlugin((nuxtApp) => {
+  // Compliance: Meta pixel only after optional cookie consent.
+  try {
+    if (typeof localStorage === 'undefined' || localStorage.getItem('optional_cookies') !== '1') {
+      return;
+    }
+  } catch (_e) {
+    return;
+  }
+
   const { $fetch } = nuxtApp; // Access $fetch from Nuxt app context
 
   useHead({

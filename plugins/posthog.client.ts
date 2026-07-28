@@ -25,10 +25,11 @@ export default defineNuxtPlugin((nuxtApp) => {
   if (!KEY) return;
 
   posthog.init(KEY, {
+      disable_session_recording: true,
     api_host: HOST,
     capture_pageview: false,
     capture_pageleave: true,
-    persistence: "localStorage+cookie",
+    persistence: 'memory',
   });
 
   if (isExcluded()) {
